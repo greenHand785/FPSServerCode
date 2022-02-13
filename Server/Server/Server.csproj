@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F9BC2EF4-7105-4142-BDA9-28EFB003EB51}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Server</RootNamespace>
+    <AssemblyName>Server</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ygy\game\db\CharacterMod.cs" />
+    <Compile Include="ygy\game\db\CharacterMod.Serializer.cs" />
+    <Compile Include="ygy\game\map\ClientPeer.cs" />
+    <Compile Include="ygy\game\map\ClientPool.cs" />
+    <Compile Include="ygy\game\map\CodingTool.cs" />
+    <Compile Include="ygy\game\map\modules\character\Character.cs" />
+    <Compile Include="ygy\game\map\modules\character\GameData.cs" />
+    <Compile Include="ygy\game\map\modules\character\UserChatLog.cs" />
+    <Compile Include="ygy\game\map\modules\character\UserCommonData.cs" />
+    <Compile Include="ygy\game\map\modules\character\UserData.cs" />
+    <Compile Include="ygy\game\map\modules\character\UserFightData.cs" />
+    <Compile Include="ygy\game\map\modules\character\UserFriend.cs" />
+    <Compile Include="ygy\game\map\modules\chat\ChatModuleManager.cs" />
+    <Compile Include="ygy\game\map\modules\chat\EReturnCodeChat.cs" />
+    <Compile Include="ygy\game\map\modules\login\EReturnCodeLogin.cs" />
+    <Compile Include="ygy\game\map\modules\login\LoginModuleManager.cs" />
+    <Compile Include="ygy\game\map\util\common\db\DBTool.cs" />
+    <Compile Include="ygy\game\map\util\common\define\DelegateDefine.cs" />
+    <Compile Include="ygy\game\map\util\common\define\EReturnCode.cs" />
+    <Compile Include="ygy\game\map\util\common\define\EventDefine.cs" />
+    <Compile Include="ygy\game\map\IGameApplication.cs" />
+    <Compile Include="ygy\game\map\MessagesMangerSystem.cs" />
+    <Compile Include="ygy\game\map\util\common\define\MSGID.cs" />
+    <Compile Include="ygy\game\map\ServerPeer.cs" />
+    <Compile Include="ygy\game\map\SocketMessage.cs" />
+    <Compile Include="ygy\game\map\util\common\eventManager\EventManager.cs" />
+    <Compile Include="ygy\game\map\util\common\eventManager\ServerEvent.cs" />
+    <Compile Include="ygy\game\map\util\common\interfaceDefine2\ICommonBean.cs" />
+    <Compile Include="ygy\game\map\util\common\LogNoteManager.cs" />
+    <Compile Include="ygy\game\map\util\common\pbCodingTool\PBCodingTool.cs" />
+    <Compile Include="ygy\game\pb\ChatMod.cs" />
+    <Compile Include="ygy\game\pb\ChatMod.Serializer.cs" />
+    <Compile Include="ygy\game\pb\LoginMod.cs" />
+    <Compile Include="ygy\game\pb\LoginMod.Serializer.cs" />
+    <Compile Include="ygy\game\pb\Mod.cs" />
+    <Compile Include="ygy\game\pb\Mod.Serializer.cs" />
+    <Compile Include="ygy\game\pb\ProtocolParser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
