@@ -5,3 +5,10 @@ D:\MyProjects\FrameSyncFPSGame\develop\server_code\Server\Server\bin\Debug\Serve
 D:\MyProjects\FrameSyncFPSGame\develop\server_code\Server\Server\bin\Debug\Server.pdb
 D:\MyProjects\FrameSyncFPSGame\develop\server_code\Server\Server\obj\Debug\Server.exe
 D:\MyProjects\FrameSyncFPSGame\develop\server_code\Server\Server\obj\Debug\Server.pdb
+D:\YgyProject\ygy\ygyProject\bishe\FrameSyncFPSGame\develop\server_code\Server\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+D:\YgyProject\ygy\ygyProject\bishe\FrameSyncFPSGame\develop\server_code\Server\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+D:\YgyProject\ygy\ygyProject\bishe\FrameSyncFPSGame\develop\server_code\Server\Server\obj\Debug\Server.exe
+D:\YgyProject\ygy\ygyProject\bishe\FrameSyncFPSGame\develop\server_code\Server\Server\obj\Debug\Server.pdb
+D:\YgyProject\ygy\ygyProject\bishe\FrameSyncFPSGame\develop\server_code\Server\Server\bin\Debug\Server.exe.config
+D:\YgyProject\ygy\ygyProject\bishe\FrameSyncFPSGame\develop\server_code\Server\Server\bin\Debug\Server.exe
+D:\YgyProject\ygy\ygyProject\bishe\FrameSyncFPSGame\develop\server_code\Server\Server\bin\Debug\Server.pdb

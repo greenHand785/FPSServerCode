@@ -13,43 +13,43 @@ using System.Collections.Generic;
 
 namespace Server.Ygy.Game.Pb
 {
-    public partial class MainMSGID
+    public partial class Descript
     {
         /// <summary>Helper: create a new instance to deserializing into</summary>
-        public static MainMSGID Deserialize(Stream stream)
+        public static Descript Deserialize(Stream stream)
         {
-            var instance = new MainMSGID();
+            var instance = new Descript();
             Deserialize(stream, instance);
             return instance;
         }
 
         /// <summary>Helper: create a new instance to deserializing into</summary>
-        public static MainMSGID DeserializeLengthDelimited(Stream stream)
+        public static Descript DeserializeLengthDelimited(Stream stream)
         {
-            var instance = new MainMSGID();
+            var instance = new Descript();
             DeserializeLengthDelimited(stream, instance);
             return instance;
         }
 
         /// <summary>Helper: create a new instance to deserializing into</summary>
-        public static MainMSGID DeserializeLength(Stream stream, int length)
+        public static Descript DeserializeLength(Stream stream, int length)
         {
-            var instance = new MainMSGID();
+            var instance = new Descript();
             DeserializeLength(stream, length, instance);
             return instance;
         }
 
         /// <summary>Helper: put the buffer into a MemoryStream and create a new instance to deserializing into</summary>
-        public static MainMSGID Deserialize(byte[] buffer)
+        public static Descript Deserialize(byte[] buffer)
         {
-            var instance = new MainMSGID();
+            var instance = new Descript();
             using (var ms = new MemoryStream(buffer))
                 Deserialize(ms, instance);
             return instance;
         }
 
         /// <summary>Helper: put the buffer into a MemoryStream before deserializing</summary>
-        public static global::Server.Ygy.Game.Pb.MainMSGID Deserialize(byte[] buffer, global::Server.Ygy.Game.Pb.MainMSGID instance)
+        public static global::Server.Ygy.Game.Pb.Descript Deserialize(byte[] buffer, global::Server.Ygy.Game.Pb.Descript instance)
         {
             using (var ms = new MemoryStream(buffer))
                 Deserialize(ms, instance);
@@ -57,7 +57,7 @@ namespace Server.Ygy.Game.Pb
         }
 
         /// <summary>Takes the remaining content of the stream and deserialze it into the instance.</summary>
-        public static global::Server.Ygy.Game.Pb.MainMSGID Deserialize(Stream stream, global::Server.Ygy.Game.Pb.MainMSGID instance)
+        public static global::Server.Ygy.Game.Pb.Descript Deserialize(Stream stream, global::Server.Ygy.Game.Pb.Descript instance)
         {
             while (true)
             {
@@ -67,17 +67,9 @@ namespace Server.Ygy.Game.Pb
                 // Optimized reading of known fields with field ID < 16
                 switch (keyByte)
                 {
-                    // Field 1 Varint
-                    case 8:
-                        instance.MainMSGIDLOGIN = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
-                        continue;
-                    // Field 2 Varint
-                    case 16:
-                        instance.MainMSGIDTALKING = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
-                        continue;
-                    // Field 3 Varint
-                    case 24:
-                        instance.MainMSGIDHALL = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                    // Field 1 LengthDelimited
+                    case 10:
+                        instance.Desc = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
                         continue;
                 }
 
@@ -98,7 +90,7 @@ namespace Server.Ygy.Game.Pb
         }
 
         /// <summary>Read the VarInt length prefix and the given number of bytes from the stream and deserialze it into the instance.</summary>
-        public static global::Server.Ygy.Game.Pb.MainMSGID DeserializeLengthDelimited(Stream stream, global::Server.Ygy.Game.Pb.MainMSGID instance)
+        public static global::Server.Ygy.Game.Pb.Descript DeserializeLengthDelimited(Stream stream, global::Server.Ygy.Game.Pb.Descript instance)
         {
             long limit = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt32(stream);
             limit += stream.Position;
@@ -117,17 +109,9 @@ namespace Server.Ygy.Game.Pb
                 // Optimized reading of known fields with field ID < 16
                 switch (keyByte)
                 {
-                    // Field 1 Varint
-                    case 8:
-                        instance.MainMSGIDLOGIN = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
-                        continue;
-                    // Field 2 Varint
-                    case 16:
-                        instance.MainMSGIDTALKING = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
-                        continue;
-                    // Field 3 Varint
-                    case 24:
-                        instance.MainMSGIDHALL = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                    // Field 1 LengthDelimited
+                    case 10:
+                        instance.Desc = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
                         continue;
                 }
 
@@ -148,7 +132,7 @@ namespace Server.Ygy.Game.Pb
         }
 
         /// <summary>Read the given number of bytes from the stream and deserialze it into the instance.</summary>
-        public static global::Server.Ygy.Game.Pb.MainMSGID DeserializeLength(Stream stream, int length, global::Server.Ygy.Game.Pb.MainMSGID instance)
+        public static global::Server.Ygy.Game.Pb.Descript DeserializeLength(Stream stream, int length, global::Server.Ygy.Game.Pb.Descript instance)
         {
             long limit = stream.Position + length;
             while (true)
@@ -166,17 +150,9 @@ namespace Server.Ygy.Game.Pb
                 // Optimized reading of known fields with field ID < 16
                 switch (keyByte)
                 {
-                    // Field 1 Varint
-                    case 8:
-                        instance.MainMSGIDLOGIN = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
-                        continue;
-                    // Field 2 Varint
-                    case 16:
-                        instance.MainMSGIDTALKING = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
-                        continue;
-                    // Field 3 Varint
-                    case 24:
-                        instance.MainMSGIDHALL = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                    // Field 1 LengthDelimited
+                    case 10:
+                        instance.Desc = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
                         continue;
                 }
 
@@ -197,23 +173,20 @@ namespace Server.Ygy.Game.Pb
         }
 
         /// <summary>Serialize the instance into the stream</summary>
-        public static void Serialize(Stream stream, MainMSGID instance)
+        public static void Serialize(Stream stream, Descript instance)
         {
             var msField = global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Pop();
-            // Key for field: 1, Varint
-            stream.WriteByte(8);
-            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.MainMSGIDLOGIN);
-            // Key for field: 2, Varint
-            stream.WriteByte(16);
-            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.MainMSGIDTALKING);
-            // Key for field: 3, Varint
-            stream.WriteByte(24);
-            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.MainMSGIDHALL);
+            if (instance.Desc != null)
+            {
+                // Key for field: 1, LengthDelimited
+                stream.WriteByte(10);
+                global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.Desc));
+            }
             global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Push(msField);
         }
 
         /// <summary>Helper: Serialize into a MemoryStream and return its byte array</summary>
-        public static byte[] SerializeToBytes(MainMSGID instance)
+        public static byte[] SerializeToBytes(Descript instance)
         {
             using (var ms = new MemoryStream())
             {
@@ -222,7 +195,7 @@ namespace Server.Ygy.Game.Pb
             }
         }
         /// <summary>Helper: Serialize with a varint length prefix</summary>
-        public static void SerializeLengthDelimited(Stream stream, MainMSGID instance)
+        public static void SerializeLengthDelimited(Stream stream, Descript instance)
         {
             var data = SerializeToBytes(instance);
             global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt32(stream, (uint)data.Length);

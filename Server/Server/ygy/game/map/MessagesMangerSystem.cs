@@ -1,8 +1,11 @@
 ﻿using Server.ygy.game.map.modules.character;
 using Server.ygy.game.map.modules.chat;
+using Server.ygy.game.map.modules.game;
+using Server.ygy.game.map.modules.hall;
 using Server.ygy.game.map.modules.login;
 using Server.ygy.game.map.util.common.eventManager;
 using Server.Ygy.Game.Map.Util.Common.EventManager;
+using Server.Ygy.Game.Pb;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -44,6 +47,8 @@ namespace Server.Ygy.Game.Map
         {
             LoginModuleManager.Instance.RegisterMessage(this);
             ChatModuleManager.Instance.RegisterMessage(this);
+            HallModuleManager.Instance.RegisterMessage(this);
+
         }
 
         /// <summary>
@@ -53,6 +58,7 @@ namespace Server.Ygy.Game.Map
         {
             LoginModuleManager.Instance.ReleaseMessage(this);
             ChatModuleManager.Instance.ReleaseMessage(this);
+            HallModuleManager.Instance.ReleaseMessage(this);
         }
 
         /// <summary>
@@ -135,6 +141,7 @@ namespace Server.Ygy.Game.Map
             {
                 return;
             }
+            Console.WriteLine("掉线了 :" + reason);
             EventManager.Instance.PushEvent(EventDefine.Event_OffLine, true, 0, ch.GetAccount());
 
             //将客户端字典中的记录移除
@@ -181,6 +188,8 @@ namespace Server.Ygy.Game.Map
             // 事件管理器刷新
             EventManager.Instance.Update();
 
+            // 游戏对局管理器
+            GameManager.Instance.Update();
         }
     }
 }

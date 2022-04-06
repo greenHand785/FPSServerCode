@@ -22,10 +22,13 @@ namespace Server.Ygy.Game.Db
         public global::Server.Ygy.Game.Db.DBUserFriend UserFriend { get; set; }
 
         /// <summary> 好友</summary>
-        public List<global::Server.Ygy.Game.Db.DBUserChatLog> UserChatLog { get; set; }
+        public List<global::Server.Ygy.Game.Db.DBUserChatLog> UserSendChatLog { get; set; }
 
-        /// <summary> 聊天记录</summary>
-        public List<global::Server.Ygy.Game.Db.DBGameData> GameData { get; set; }
+        /// <summary> 发送聊天记录</summary>
+        public List<global::Server.Ygy.Game.Db.DBUserChatLog> UserReceiveChatLog { get; set; }
+
+        /// <summary> 接受聊天记录</summary>
+        public List<global::Server.Ygy.Game.Db.DBGameRecordData> GameData { get; set; }
 
     }
 
@@ -69,34 +72,47 @@ namespace Server.Ygy.Game.Db
         /// <summary> 邮箱号</summary>
         public string Name { get; set; }
 
+        /// <summary> 姓名</summary>
+        public string UserImg { get; set; }
+
     }
 
     public partial class DBUserFriend
     {
-        public List<string> Friends { get; set; }
+        public List<global::Server.Ygy.Game.Db.DBFriendInfo> Friends { get; set; }
+
+    }
+
+    public partial class DBFriendInfo
+    {
+        public string Account { get; set; }
+
+        public string Name { get; set; }
+
+        public string UserImg { get; set; }
 
     }
 
     public partial class DBUserChatLog
     {
+        public string SendAccount { get; set; }
+
+        /// <summary> 接受者账号</summary>
         public string ReceiveAccount { get; set; }
 
         /// <summary> 接受者账号</summary>
         public string Msg { get; set; }
 
         /// <summary> 消息内容:文字或图片路径</summary>
-        public string Date { get; set; }
+        public long Date { get; set; }
 
     }
 
     public partial class DBGameData
     {
-        public string StartDate { get; set; }
+        public long EndDate { get; set; }
 
-        /// <summary> 开始时间</summary>
-        public string EndDate { get; set; }
-
-        /// <summary> 结束时间</summary>
+        /// <summary> 死亡时间</summary>
         public int KillNum { get; set; }
 
         /// <summary> 杀敌数</summary>
@@ -107,6 +123,27 @@ namespace Server.Ygy.Game.Db
 
         /// <summary> 死亡数</summary>
         public int HarmNum { get; set; }
+
+        /// <summary> 伤害数值</summary>
+        public int Rank { get; set; }
+
+        /// <summary> 排名</summary>
+        public string Name { get; set; }
+
+        /// <summary> 名称</summary>
+        public string Account { get; set; }
+
+    }
+
+    public partial class DBGameRecordData
+    {
+        public long Id { get; set; }
+
+        /// <summary> 对局id</summary>
+        public long StartDate { get; set; }
+
+        /// <summary> 开始时间</summary>
+        public List<global::Server.Ygy.Game.Db.DBGameData> Info { get; set; }
 
     }
 

@@ -1,4 +1,5 @@
-﻿using Server.ygy.game.map.util.common.interfaceDefine;
+﻿using Server.ygy.game.map.util.common.db;
+using Server.ygy.game.map.util.common.interfaceDefine;
 using Server.Ygy.Game.Db;
 using Server.Ygy.Game.Pb;
 using System;
@@ -11,14 +12,7 @@ namespace Server.ygy.game.map.modules.character
 {
     public class UserFriend : ICommonBean
     {
-        private List<string> friendsList;
-
-        public UserFriend()
-        {
-            FriendsList = new List<string>();
-        }
-
-        public List<string> FriendsList { get => friendsList; set => friendsList = value; }
+        private List<FriendInfo> friendsList;
 
         public void Save2DB(object dbMsg)
         {
@@ -33,12 +27,14 @@ namespace Server.ygy.game.map.modules.character
             }
             if(dBUserFriend.Friends == null)
             {
-                return;
+                dBUserFriend.Friends = new List<DBFriendInfo>();
             }
             dBUserFriend.Friends.Clear();
             foreach (var item in friendsList)
             {
-                dBUserFriend.Friends.Add(item);
+                DBFriendInfo info = null;
+                item.Save2DB(info);
+                dBUserFriend.Friends.Add(info);
             }
         }
 
@@ -46,21 +42,22 @@ namespace Server.ygy.game.map.modules.character
         {
             if(pbMsg == null)
             {
-                pbMsg = new PBMsgChatFriendDataList();
+                return;
             }
-            PBMsgChatFriendDataList pBMsgChatFriendDataList = pbMsg as PBMsgChatFriendDataList;
+            List<PBMsgFriendInfo> pBMsgChatFriendDataList = pbMsg as List<PBMsgFriendInfo>;
             if(pBMsgChatFriendDataList == null)
             {
                 return;
             }
-            pBMsgChatFriendDataList.Friends = new List<string>();
-            if(FriendsList == null)
+            if(friendsList == null)
             {
                 return;
             }
-            foreach (var item in FriendsList)
+            foreach (var item in friendsList)
             {
-                pBMsgChatFriendDataList.Friends.Add(item);
+                PBMsgFriendInfo info = new PBMsgFriendInfo();
+                item.Serialie2PB(info);
+                pBMsgChatFriendDataList.Add(info);
             }
         }
 
@@ -75,11 +72,46 @@ namespace Server.ygy.game.map.modules.character
             {
                 return;
             }
+            if(friendsList == null)
+            {
+                friendsList = new List<FriendInfo>();
+            }
             friendsList.Clear();
             foreach (var item in dBUserFriend.Friends)
             {
-                friendsList.Add(item);
+                FriendInfo info = new FriendInfo();
+                info.SerialieFromDB(item);
+                friendsList.Add(info);
             }
+        }
+
+        public void AddFriend(FriendInfo info)
+        {
+            if(info == null)
+            {
+                return;
+            }
+            if(friendsList == null)
+            {
+                friendsList = new List<FriendInfo>();
+            }
+            friendsList.Add(info);
+        }
+
+        public FriendInfo GetFriendInfo(string account)
+        {
+            if(friendsList == null)
+            {
+                return null;
+            }
+            foreach (var item in friendsList)
+            {
+                if(item.Account == account)
+                {
+                    return item;
+                }
+            }
+            return null;
         }
     }
 }

@@ -20,6 +20,9 @@ namespace Server.Ygy.Game.Pb
         /// <summary> 登陆注册功能</summary>
         public int MainMSGIDTALKING { get; set; }
 
+        /// <summary> 聊天功能</summary>
+        public int MainMSGIDHALL { get; set; }
+
     }
 
 }

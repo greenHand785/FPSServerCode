@@ -1,5 +1,6 @@
 ﻿using Server.ygy.game.map.modules.character;
 using Server.ygy.game.map.util.common;
+using Server.Ygy.Game.Pb;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -147,6 +148,11 @@ namespace Server.Ygy.Game.Map
             }
             sendIsProcess = true;
             byte[] packet = sendDataCache.Dequeue();
+            if(packet == null)
+            {
+                sendIsProcess = false;
+                return;
+            }
             SendDataArgs.SetBuffer(packet, 0, packet.Length);
             bool r = ClientSocket.SendAsync(SendDataArgs);
             if (!r)

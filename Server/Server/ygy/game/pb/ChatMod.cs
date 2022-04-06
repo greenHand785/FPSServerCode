@@ -38,6 +38,33 @@ namespace Server.Ygy.Game.Pb
         /// <summary> 好友列表请求</summary>
         public int MSGIDCHATFRIENDDATARESPONSE { get; set; }
 
+        /// <summary> 好友列表回复</summary>
+        public int MSGIDCHATFRIENDMSGLOGREQUEST { get; set; }
+
+        /// <summary> 好友消息记录列表请求.</summary>
+        public int MSGIDCHATFRIENDMSGLOGRESPONSE { get; set; }
+
+        /// <summary> 好友消息记录列表回复</summary>
+        public int MSGIDCHATSELFMSGLOGREQUEST { get; set; }
+
+        /// <summary> 玩家发送给好友的聊天记录请求</summary>
+        public int MSGIDCHATSELFMSGLOGRESPONSE { get; set; }
+
+        /// <summary> 玩家发送给好友的聊天记录回复</summary>
+        public int MSGIDCHATUSERDATAREQUEST { get; set; }
+
+        /// <summary> 用户数据查询请求</summary>
+        public int MSGIDCHATUSERDATARESPONSE { get; set; }
+
+        /// <summary> 用户数据查询回复</summary>
+        public int MSGIDCHATANSWERADDFRIENDREQUEST { get; set; }
+
+        /// <summary> 回应他人的添加好友请求</summary>
+        public int MSGIDCHATANSWERADDFRIENDRESPONSE { get; set; }
+
+        /// <summary> 回应他人的添加好友回复</summary>
+        public int MSGIDCHATANSWERADDFRIENDNOTIFY { get; set; }
+
     }
 
     /// <summary> 发送消息请求</summary>
@@ -49,7 +76,7 @@ namespace Server.Ygy.Game.Pb
         public string Msg { get; set; }
 
         /// <summary> 消息</summary>
-        public string Date { get; set; }
+        public long Date { get; set; }
 
     }
 
@@ -69,18 +96,21 @@ namespace Server.Ygy.Game.Pb
         public string Msg { get; set; }
 
         /// <summary> 消息内容</summary>
-        public string Date { get; set; }
+        public long Date { get; set; }
+
+        /// <summary> 发送时间</summary>
+        public string ReceiveAccount { get; set; }
 
     }
 
-    /// <summary> 发送好友请求</summary>
+    /// <summary> 发送添加好友请求</summary>
     public partial class PBMsgChatSendFriendRequest
     {
         public string DirAccount { get; set; }
 
     }
 
-    /// <summary> 好友请求回复</summary>
+    /// <summary> 添加好友请求回复</summary>
     public partial class PBMsgChatSendFriendResponse
     {
         public int ReturnCode { get; set; }
@@ -92,26 +122,125 @@ namespace Server.Ygy.Game.Pb
     {
         public string RequestAccount { get; set; }
 
+        /// <summary> 发送者账号</summary>
+        public string RequestName { get; set; }
+
     }
 
     /// <summary> 好友列表请求</summary>
-    public partial class PBMsgChatFriendDataRequest
+    public partial class PBMsgUserFriendListRequest
     {
     }
 
     /// <summary> 好友列表回复</summary>
-    public partial class PBMsgChatFriendDataResponse
+    public partial class PBMsgUserFriendListResponse
     {
         public int ReturnCode { get; set; }
 
-        public global::Server.Ygy.Game.Pb.PBMsgChatFriendDataList FriendList { get; set; }
+        public List<global::Server.Ygy.Game.Pb.PBMsgFriendInfo> Friends { get; set; }
 
     }
 
-    /// <summary> 好友列表信息</summary>
-    public partial class PBMsgChatFriendDataList
+    public partial class PBMsgFriendInfo
     {
-        public List<string> Friends { get; set; }
+        public string Account { get; set; }
+
+        public string Name { get; set; }
+
+        public string UserImg { get; set; }
+
+    }
+
+    /// <summary> 好友聊天记录请求</summary>
+    public partial class PBMsgFriendChatMsgLogRequest
+    {
+    }
+
+    /// <summary> 好友聊天记录回复</summary>
+    public partial class PBMsgFriendChatMsgLogResponse
+    {
+        public int ReturnCode { get; set; }
+
+        /// <summary> 返回码</summary>
+        public List<global::Server.Ygy.Game.Pb.PBMsgFriendChatMsg> Msgs { get; set; }
+
+    }
+
+    public partial class PBMsgFriendChatMsg
+    {
+        public string Account { get; set; }
+
+        public List<global::Server.Ygy.Game.Pb.PBMsgChatMsg> ChatMsgs { get; set; }
+
+    }
+
+    /// <summary> 聊天记录</summary>
+    public partial class PBMsgChatMsg
+    {
+        public string Msg { get; set; }
+
+        /// <summary> 消息内容</summary>
+        public long Date { get; set; }
+
+    }
+
+    /// <summary> 玩家自身发送的聊天记录请求</summary>
+    public partial class PBMsgSelfSendChatMsgLogRequest
+    {
+    }
+
+    /// <summary> 玩家自身发送的聊天记录回复</summary>
+    public partial class PBMsgSelfSendChatMsgLogResponse
+    {
+        public int ReturnCode { get; set; }
+
+        /// <summary>返回码</summary>
+        public List<global::Server.Ygy.Game.Pb.PBMsgFriendChatMsg> Msgs { get; set; }
+
+    }
+
+    /// <summary> 查询用户数据请求</summary>
+    public partial class PBMsgSelectUserDataRequest
+    {
+        public string Account { get; set; }
+
+        /// <summary> 关键词，账号，或者用户名</summary>
+        public string Name { get; set; }
+
+    }
+
+    /// <summary> 查询用户数据回复</summary>
+    public partial class PBMsgSelectUserDataResponse
+    {
+        public int ReturnCode { get; set; }
+
+        public List<global::Server.Ygy.Game.Pb.PBMsgFriendInfo> Users { get; set; }
+
+    }
+
+    /// <summary> 回复他人的添加好友请求</summary>
+    public partial class PBMsgAnswerAddFriendRequest
+    {
+        public string AnswerAccount { get; set; }
+
+        /// <summary> 好友请求者账号</summary>
+        public bool Result { get; set; }
+
+    }
+
+    /// <summary> 回应他人的添加好友回复</summary>
+    public partial class PBMsgAnswerAddFriendResponse
+    {
+        public int ReturnCode { get; set; }
+
+        public global::Server.Ygy.Game.Pb.PBMsgFriendInfo FriendInfo { get; set; }
+
+    }
+
+    /// <summary> 回应他人的添加好友回复 , 服务器发送给 发起好友请求的用户</summary>
+    public partial class PBMsgAnswerAddFriendNotify
+    {
+        public global::Server.Ygy.Game.Pb.PBMsgFriendInfo AddFriendInfo { get; set; }
 
     }
 

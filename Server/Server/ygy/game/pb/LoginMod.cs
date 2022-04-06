@@ -48,6 +48,10 @@ namespace Server.Ygy.Game.Pb
     {
         public int ReturnCode { get; set; }
 
+        public string Account { get; set; }
+
+        public string Psw { get; set; }
+
     }
 
     /// <summary> 注册请求</summary>

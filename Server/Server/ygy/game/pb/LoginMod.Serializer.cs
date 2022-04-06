@@ -556,6 +556,14 @@ namespace Server.Ygy.Game.Pb
                     case 8:
                         instance.ReturnCode = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
                         continue;
+                    // Field 2 LengthDelimited
+                    case 18:
+                        instance.Account = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 3 LengthDelimited
+                    case 26:
+                        instance.Psw = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
                 }
 
                 var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
@@ -598,6 +606,14 @@ namespace Server.Ygy.Game.Pb
                     case 8:
                         instance.ReturnCode = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
                         continue;
+                    // Field 2 LengthDelimited
+                    case 18:
+                        instance.Account = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 3 LengthDelimited
+                    case 26:
+                        instance.Psw = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
                 }
 
                 var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
@@ -639,6 +655,14 @@ namespace Server.Ygy.Game.Pb
                     case 8:
                         instance.ReturnCode = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
                         continue;
+                    // Field 2 LengthDelimited
+                    case 18:
+                        instance.Account = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 3 LengthDelimited
+                    case 26:
+                        instance.Psw = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
                 }
 
                 var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
@@ -664,6 +688,18 @@ namespace Server.Ygy.Game.Pb
             // Key for field: 1, Varint
             stream.WriteByte(8);
             global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.ReturnCode);
+            if (instance.Account != null)
+            {
+                // Key for field: 2, LengthDelimited
+                stream.WriteByte(18);
+                global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.Account));
+            }
+            if (instance.Psw != null)
+            {
+                // Key for field: 3, LengthDelimited
+                stream.WriteByte(26);
+                global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.Psw));
+            }
             global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Push(msField);
         }
 

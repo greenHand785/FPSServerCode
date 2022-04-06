@@ -15,7 +15,7 @@ namespace Server.Ygy.Game.Map
         public int subCode { get; }
         //携带参数数据
         public object value { get; }
-        public SocketMessage(int opcode,int subcode,object value)
+        public SocketMessage(int opcode,int subcode, object value)
         {
             this.opCode = opcode;
             this.subCode = subcode;

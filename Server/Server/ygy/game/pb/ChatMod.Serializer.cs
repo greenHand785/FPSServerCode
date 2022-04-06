@@ -111,6 +111,51 @@ namespace Server.Ygy.Game.Pb
                             break;
                         instance.MSGIDCHATFRIENDDATARESPONSE = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
                         continue;
+                    case 131137:
+                        if(key.WireType != global::SilentOrbit.ProtocolBuffers.Wire.Varint)
+                            break;
+                        instance.MSGIDCHATFRIENDMSGLOGREQUEST = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    case 131138:
+                        if(key.WireType != global::SilentOrbit.ProtocolBuffers.Wire.Varint)
+                            break;
+                        instance.MSGIDCHATFRIENDMSGLOGRESPONSE = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    case 131153:
+                        if(key.WireType != global::SilentOrbit.ProtocolBuffers.Wire.Varint)
+                            break;
+                        instance.MSGIDCHATSELFMSGLOGREQUEST = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    case 131154:
+                        if(key.WireType != global::SilentOrbit.ProtocolBuffers.Wire.Varint)
+                            break;
+                        instance.MSGIDCHATSELFMSGLOGRESPONSE = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    case 131169:
+                        if(key.WireType != global::SilentOrbit.ProtocolBuffers.Wire.Varint)
+                            break;
+                        instance.MSGIDCHATUSERDATAREQUEST = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    case 131170:
+                        if(key.WireType != global::SilentOrbit.ProtocolBuffers.Wire.Varint)
+                            break;
+                        instance.MSGIDCHATUSERDATARESPONSE = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    case 131185:
+                        if(key.WireType != global::SilentOrbit.ProtocolBuffers.Wire.Varint)
+                            break;
+                        instance.MSGIDCHATANSWERADDFRIENDREQUEST = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    case 131186:
+                        if(key.WireType != global::SilentOrbit.ProtocolBuffers.Wire.Varint)
+                            break;
+                        instance.MSGIDCHATANSWERADDFRIENDRESPONSE = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    case 131184:
+                        if(key.WireType != global::SilentOrbit.ProtocolBuffers.Wire.Varint)
+                            break;
+                        instance.MSGIDCHATANSWERADDFRIENDNOTIFY = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
                     default:
                         global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
                         break;
@@ -184,6 +229,51 @@ namespace Server.Ygy.Game.Pb
                             break;
                         instance.MSGIDCHATFRIENDDATARESPONSE = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
                         continue;
+                    case 131137:
+                        if(key.WireType != global::SilentOrbit.ProtocolBuffers.Wire.Varint)
+                            break;
+                        instance.MSGIDCHATFRIENDMSGLOGREQUEST = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    case 131138:
+                        if(key.WireType != global::SilentOrbit.ProtocolBuffers.Wire.Varint)
+                            break;
+                        instance.MSGIDCHATFRIENDMSGLOGRESPONSE = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    case 131153:
+                        if(key.WireType != global::SilentOrbit.ProtocolBuffers.Wire.Varint)
+                            break;
+                        instance.MSGIDCHATSELFMSGLOGREQUEST = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    case 131154:
+                        if(key.WireType != global::SilentOrbit.ProtocolBuffers.Wire.Varint)
+                            break;
+                        instance.MSGIDCHATSELFMSGLOGRESPONSE = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    case 131169:
+                        if(key.WireType != global::SilentOrbit.ProtocolBuffers.Wire.Varint)
+                            break;
+                        instance.MSGIDCHATUSERDATAREQUEST = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    case 131170:
+                        if(key.WireType != global::SilentOrbit.ProtocolBuffers.Wire.Varint)
+                            break;
+                        instance.MSGIDCHATUSERDATARESPONSE = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    case 131185:
+                        if(key.WireType != global::SilentOrbit.ProtocolBuffers.Wire.Varint)
+                            break;
+                        instance.MSGIDCHATANSWERADDFRIENDREQUEST = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    case 131186:
+                        if(key.WireType != global::SilentOrbit.ProtocolBuffers.Wire.Varint)
+                            break;
+                        instance.MSGIDCHATANSWERADDFRIENDRESPONSE = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    case 131184:
+                        if(key.WireType != global::SilentOrbit.ProtocolBuffers.Wire.Varint)
+                            break;
+                        instance.MSGIDCHATANSWERADDFRIENDNOTIFY = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
                     default:
                         global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
                         break;
@@ -256,6 +346,51 @@ namespace Server.Ygy.Game.Pb
                             break;
                         instance.MSGIDCHATFRIENDDATARESPONSE = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
                         continue;
+                    case 131137:
+                        if(key.WireType != global::SilentOrbit.ProtocolBuffers.Wire.Varint)
+                            break;
+                        instance.MSGIDCHATFRIENDMSGLOGREQUEST = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    case 131138:
+                        if(key.WireType != global::SilentOrbit.ProtocolBuffers.Wire.Varint)
+                            break;
+                        instance.MSGIDCHATFRIENDMSGLOGRESPONSE = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    case 131153:
+                        if(key.WireType != global::SilentOrbit.ProtocolBuffers.Wire.Varint)
+                            break;
+                        instance.MSGIDCHATSELFMSGLOGREQUEST = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    case 131154:
+                        if(key.WireType != global::SilentOrbit.ProtocolBuffers.Wire.Varint)
+                            break;
+                        instance.MSGIDCHATSELFMSGLOGRESPONSE = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    case 131169:
+                        if(key.WireType != global::SilentOrbit.ProtocolBuffers.Wire.Varint)
+                            break;
+                        instance.MSGIDCHATUSERDATAREQUEST = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    case 131170:
+                        if(key.WireType != global::SilentOrbit.ProtocolBuffers.Wire.Varint)
+                            break;
+                        instance.MSGIDCHATUSERDATARESPONSE = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    case 131185:
+                        if(key.WireType != global::SilentOrbit.ProtocolBuffers.Wire.Varint)
+                            break;
+                        instance.MSGIDCHATANSWERADDFRIENDREQUEST = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    case 131186:
+                        if(key.WireType != global::SilentOrbit.ProtocolBuffers.Wire.Varint)
+                            break;
+                        instance.MSGIDCHATANSWERADDFRIENDRESPONSE = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    case 131184:
+                        if(key.WireType != global::SilentOrbit.ProtocolBuffers.Wire.Varint)
+                            break;
+                        instance.MSGIDCHATANSWERADDFRIENDNOTIFY = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
                     default:
                         global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
                         break;
@@ -309,6 +444,51 @@ namespace Server.Ygy.Game.Pb
             stream.WriteByte(131);
             stream.WriteByte(64);
             global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.MSGIDCHATFRIENDDATARESPONSE);
+            // Key for field: 131137, Varint
+            stream.WriteByte(136);
+            stream.WriteByte(132);
+            stream.WriteByte(64);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.MSGIDCHATFRIENDMSGLOGREQUEST);
+            // Key for field: 131138, Varint
+            stream.WriteByte(144);
+            stream.WriteByte(132);
+            stream.WriteByte(64);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.MSGIDCHATFRIENDMSGLOGRESPONSE);
+            // Key for field: 131153, Varint
+            stream.WriteByte(136);
+            stream.WriteByte(133);
+            stream.WriteByte(64);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.MSGIDCHATSELFMSGLOGREQUEST);
+            // Key for field: 131154, Varint
+            stream.WriteByte(144);
+            stream.WriteByte(133);
+            stream.WriteByte(64);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.MSGIDCHATSELFMSGLOGRESPONSE);
+            // Key for field: 131169, Varint
+            stream.WriteByte(136);
+            stream.WriteByte(134);
+            stream.WriteByte(64);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.MSGIDCHATUSERDATAREQUEST);
+            // Key for field: 131170, Varint
+            stream.WriteByte(144);
+            stream.WriteByte(134);
+            stream.WriteByte(64);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.MSGIDCHATUSERDATARESPONSE);
+            // Key for field: 131185, Varint
+            stream.WriteByte(136);
+            stream.WriteByte(135);
+            stream.WriteByte(64);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.MSGIDCHATANSWERADDFRIENDREQUEST);
+            // Key for field: 131186, Varint
+            stream.WriteByte(144);
+            stream.WriteByte(135);
+            stream.WriteByte(64);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.MSGIDCHATANSWERADDFRIENDRESPONSE);
+            // Key for field: 131184, Varint
+            stream.WriteByte(128);
+            stream.WriteByte(135);
+            stream.WriteByte(64);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.MSGIDCHATANSWERADDFRIENDNOTIFY);
             global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Push(msField);
         }
 
@@ -392,9 +572,9 @@ namespace Server.Ygy.Game.Pb
                     case 18:
                         instance.Msg = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
                         continue;
-                    // Field 3 LengthDelimited
-                    case 26:
-                        instance.Date = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                    // Field 3 Varint
+                    case 24:
+                        instance.Date = (long)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
                         continue;
                 }
 
@@ -442,9 +622,9 @@ namespace Server.Ygy.Game.Pb
                     case 18:
                         instance.Msg = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
                         continue;
-                    // Field 3 LengthDelimited
-                    case 26:
-                        instance.Date = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                    // Field 3 Varint
+                    case 24:
+                        instance.Date = (long)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
                         continue;
                 }
 
@@ -491,9 +671,9 @@ namespace Server.Ygy.Game.Pb
                     case 18:
                         instance.Msg = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
                         continue;
-                    // Field 3 LengthDelimited
-                    case 26:
-                        instance.Date = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                    // Field 3 Varint
+                    case 24:
+                        instance.Date = (long)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
                         continue;
                 }
 
@@ -529,12 +709,9 @@ namespace Server.Ygy.Game.Pb
                 stream.WriteByte(18);
                 global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.Msg));
             }
-            if (instance.Date != null)
-            {
-                // Key for field: 3, LengthDelimited
-                stream.WriteByte(26);
-                global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.Date));
-            }
+            // Key for field: 3, Varint
+            stream.WriteByte(24);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.Date);
             global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Push(msField);
         }
 
@@ -805,9 +982,13 @@ namespace Server.Ygy.Game.Pb
                     case 18:
                         instance.Msg = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
                         continue;
-                    // Field 3 LengthDelimited
-                    case 26:
-                        instance.Date = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                    // Field 3 Varint
+                    case 24:
+                        instance.Date = (long)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    // Field 4 LengthDelimited
+                    case 34:
+                        instance.ReceiveAccount = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
                         continue;
                 }
 
@@ -855,9 +1036,13 @@ namespace Server.Ygy.Game.Pb
                     case 18:
                         instance.Msg = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
                         continue;
-                    // Field 3 LengthDelimited
-                    case 26:
-                        instance.Date = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                    // Field 3 Varint
+                    case 24:
+                        instance.Date = (long)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    // Field 4 LengthDelimited
+                    case 34:
+                        instance.ReceiveAccount = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
                         continue;
                 }
 
@@ -904,9 +1089,13 @@ namespace Server.Ygy.Game.Pb
                     case 18:
                         instance.Msg = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
                         continue;
-                    // Field 3 LengthDelimited
-                    case 26:
-                        instance.Date = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                    // Field 3 Varint
+                    case 24:
+                        instance.Date = (long)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    // Field 4 LengthDelimited
+                    case 34:
+                        instance.ReceiveAccount = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
                         continue;
                 }
 
@@ -942,11 +1131,14 @@ namespace Server.Ygy.Game.Pb
                 stream.WriteByte(18);
                 global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.Msg));
             }
-            if (instance.Date != null)
+            // Key for field: 3, Varint
+            stream.WriteByte(24);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.Date);
+            if (instance.ReceiveAccount != null)
             {
-                // Key for field: 3, LengthDelimited
-                stream.WriteByte(26);
-                global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.Date));
+                // Key for field: 4, LengthDelimited
+                stream.WriteByte(34);
+                global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.ReceiveAccount));
             }
             global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Push(msField);
         }
@@ -1404,6 +1596,10 @@ namespace Server.Ygy.Game.Pb
                     case 10:
                         instance.RequestAccount = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
                         continue;
+                    // Field 2 LengthDelimited
+                    case 18:
+                        instance.RequestName = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
                 }
 
                 var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
@@ -1446,6 +1642,10 @@ namespace Server.Ygy.Game.Pb
                     case 10:
                         instance.RequestAccount = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
                         continue;
+                    // Field 2 LengthDelimited
+                    case 18:
+                        instance.RequestName = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
                 }
 
                 var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
@@ -1487,6 +1687,10 @@ namespace Server.Ygy.Game.Pb
                     case 10:
                         instance.RequestAccount = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
                         continue;
+                    // Field 2 LengthDelimited
+                    case 18:
+                        instance.RequestName = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
                 }
 
                 var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
@@ -1515,6 +1719,12 @@ namespace Server.Ygy.Game.Pb
                 stream.WriteByte(10);
                 global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.RequestAccount));
             }
+            if (instance.RequestName != null)
+            {
+                // Key for field: 2, LengthDelimited
+                stream.WriteByte(18);
+                global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.RequestName));
+            }
             global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Push(msField);
         }
 
@@ -1536,43 +1746,43 @@ namespace Server.Ygy.Game.Pb
         }
     }
 
-    public partial class PBMsgChatFriendDataRequest
+    public partial class PBMsgUserFriendListRequest
     {
         /// <summary>Helper: create a new instance to deserializing into</summary>
-        public static PBMsgChatFriendDataRequest Deserialize(Stream stream)
+        public static PBMsgUserFriendListRequest Deserialize(Stream stream)
         {
-            var instance = new PBMsgChatFriendDataRequest();
+            var instance = new PBMsgUserFriendListRequest();
             Deserialize(stream, instance);
             return instance;
         }
 
         /// <summary>Helper: create a new instance to deserializing into</summary>
-        public static PBMsgChatFriendDataRequest DeserializeLengthDelimited(Stream stream)
+        public static PBMsgUserFriendListRequest DeserializeLengthDelimited(Stream stream)
         {
-            var instance = new PBMsgChatFriendDataRequest();
+            var instance = new PBMsgUserFriendListRequest();
             DeserializeLengthDelimited(stream, instance);
             return instance;
         }
 
         /// <summary>Helper: create a new instance to deserializing into</summary>
-        public static PBMsgChatFriendDataRequest DeserializeLength(Stream stream, int length)
+        public static PBMsgUserFriendListRequest DeserializeLength(Stream stream, int length)
         {
-            var instance = new PBMsgChatFriendDataRequest();
+            var instance = new PBMsgUserFriendListRequest();
             DeserializeLength(stream, length, instance);
             return instance;
         }
 
         /// <summary>Helper: put the buffer into a MemoryStream and create a new instance to deserializing into</summary>
-        public static PBMsgChatFriendDataRequest Deserialize(byte[] buffer)
+        public static PBMsgUserFriendListRequest Deserialize(byte[] buffer)
         {
-            var instance = new PBMsgChatFriendDataRequest();
+            var instance = new PBMsgUserFriendListRequest();
             using (var ms = new MemoryStream(buffer))
                 Deserialize(ms, instance);
             return instance;
         }
 
         /// <summary>Helper: put the buffer into a MemoryStream before deserializing</summary>
-        public static global::Server.Ygy.Game.Pb.PBMsgChatFriendDataRequest Deserialize(byte[] buffer, global::Server.Ygy.Game.Pb.PBMsgChatFriendDataRequest instance)
+        public static global::Server.Ygy.Game.Pb.PBMsgUserFriendListRequest Deserialize(byte[] buffer, global::Server.Ygy.Game.Pb.PBMsgUserFriendListRequest instance)
         {
             using (var ms = new MemoryStream(buffer))
                 Deserialize(ms, instance);
@@ -1580,7 +1790,7 @@ namespace Server.Ygy.Game.Pb
         }
 
         /// <summary>Takes the remaining content of the stream and deserialze it into the instance.</summary>
-        public static global::Server.Ygy.Game.Pb.PBMsgChatFriendDataRequest Deserialize(Stream stream, global::Server.Ygy.Game.Pb.PBMsgChatFriendDataRequest instance)
+        public static global::Server.Ygy.Game.Pb.PBMsgUserFriendListRequest Deserialize(Stream stream, global::Server.Ygy.Game.Pb.PBMsgUserFriendListRequest instance)
         {
             while (true)
             {
@@ -1604,7 +1814,7 @@ namespace Server.Ygy.Game.Pb
         }
 
         /// <summary>Read the VarInt length prefix and the given number of bytes from the stream and deserialze it into the instance.</summary>
-        public static global::Server.Ygy.Game.Pb.PBMsgChatFriendDataRequest DeserializeLengthDelimited(Stream stream, global::Server.Ygy.Game.Pb.PBMsgChatFriendDataRequest instance)
+        public static global::Server.Ygy.Game.Pb.PBMsgUserFriendListRequest DeserializeLengthDelimited(Stream stream, global::Server.Ygy.Game.Pb.PBMsgUserFriendListRequest instance)
         {
             long limit = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt32(stream);
             limit += stream.Position;
@@ -1637,7 +1847,7 @@ namespace Server.Ygy.Game.Pb
         }
 
         /// <summary>Read the given number of bytes from the stream and deserialze it into the instance.</summary>
-        public static global::Server.Ygy.Game.Pb.PBMsgChatFriendDataRequest DeserializeLength(Stream stream, int length, global::Server.Ygy.Game.Pb.PBMsgChatFriendDataRequest instance)
+        public static global::Server.Ygy.Game.Pb.PBMsgUserFriendListRequest DeserializeLength(Stream stream, int length, global::Server.Ygy.Game.Pb.PBMsgUserFriendListRequest instance)
         {
             long limit = stream.Position + length;
             while (true)
@@ -1669,14 +1879,14 @@ namespace Server.Ygy.Game.Pb
         }
 
         /// <summary>Serialize the instance into the stream</summary>
-        public static void Serialize(Stream stream, PBMsgChatFriendDataRequest instance)
+        public static void Serialize(Stream stream, PBMsgUserFriendListRequest instance)
         {
             var msField = global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Pop();
             global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Push(msField);
         }
 
         /// <summary>Helper: Serialize into a MemoryStream and return its byte array</summary>
-        public static byte[] SerializeToBytes(PBMsgChatFriendDataRequest instance)
+        public static byte[] SerializeToBytes(PBMsgUserFriendListRequest instance)
         {
             using (var ms = new MemoryStream())
             {
@@ -1685,7 +1895,7 @@ namespace Server.Ygy.Game.Pb
             }
         }
         /// <summary>Helper: Serialize with a varint length prefix</summary>
-        public static void SerializeLengthDelimited(Stream stream, PBMsgChatFriendDataRequest instance)
+        public static void SerializeLengthDelimited(Stream stream, PBMsgUserFriendListRequest instance)
         {
             var data = SerializeToBytes(instance);
             global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt32(stream, (uint)data.Length);
@@ -1693,43 +1903,43 @@ namespace Server.Ygy.Game.Pb
         }
     }
 
-    public partial class PBMsgChatFriendDataResponse
+    public partial class PBMsgUserFriendListResponse
     {
         /// <summary>Helper: create a new instance to deserializing into</summary>
-        public static PBMsgChatFriendDataResponse Deserialize(Stream stream)
+        public static PBMsgUserFriendListResponse Deserialize(Stream stream)
         {
-            var instance = new PBMsgChatFriendDataResponse();
+            var instance = new PBMsgUserFriendListResponse();
             Deserialize(stream, instance);
             return instance;
         }
 
         /// <summary>Helper: create a new instance to deserializing into</summary>
-        public static PBMsgChatFriendDataResponse DeserializeLengthDelimited(Stream stream)
+        public static PBMsgUserFriendListResponse DeserializeLengthDelimited(Stream stream)
         {
-            var instance = new PBMsgChatFriendDataResponse();
+            var instance = new PBMsgUserFriendListResponse();
             DeserializeLengthDelimited(stream, instance);
             return instance;
         }
 
         /// <summary>Helper: create a new instance to deserializing into</summary>
-        public static PBMsgChatFriendDataResponse DeserializeLength(Stream stream, int length)
+        public static PBMsgUserFriendListResponse DeserializeLength(Stream stream, int length)
         {
-            var instance = new PBMsgChatFriendDataResponse();
+            var instance = new PBMsgUserFriendListResponse();
             DeserializeLength(stream, length, instance);
             return instance;
         }
 
         /// <summary>Helper: put the buffer into a MemoryStream and create a new instance to deserializing into</summary>
-        public static PBMsgChatFriendDataResponse Deserialize(byte[] buffer)
+        public static PBMsgUserFriendListResponse Deserialize(byte[] buffer)
         {
-            var instance = new PBMsgChatFriendDataResponse();
+            var instance = new PBMsgUserFriendListResponse();
             using (var ms = new MemoryStream(buffer))
                 Deserialize(ms, instance);
             return instance;
         }
 
         /// <summary>Helper: put the buffer into a MemoryStream before deserializing</summary>
-        public static global::Server.Ygy.Game.Pb.PBMsgChatFriendDataResponse Deserialize(byte[] buffer, global::Server.Ygy.Game.Pb.PBMsgChatFriendDataResponse instance)
+        public static global::Server.Ygy.Game.Pb.PBMsgUserFriendListResponse Deserialize(byte[] buffer, global::Server.Ygy.Game.Pb.PBMsgUserFriendListResponse instance)
         {
             using (var ms = new MemoryStream(buffer))
                 Deserialize(ms, instance);
@@ -1737,8 +1947,10 @@ namespace Server.Ygy.Game.Pb
         }
 
         /// <summary>Takes the remaining content of the stream and deserialze it into the instance.</summary>
-        public static global::Server.Ygy.Game.Pb.PBMsgChatFriendDataResponse Deserialize(Stream stream, global::Server.Ygy.Game.Pb.PBMsgChatFriendDataResponse instance)
+        public static global::Server.Ygy.Game.Pb.PBMsgUserFriendListResponse Deserialize(Stream stream, global::Server.Ygy.Game.Pb.PBMsgUserFriendListResponse instance)
         {
+            if (instance.Friends == null)
+                instance.Friends = new List<global::Server.Ygy.Game.Pb.PBMsgFriendInfo>();
             while (true)
             {
                 int keyByte = stream.ReadByte();
@@ -1753,10 +1965,8 @@ namespace Server.Ygy.Game.Pb
                         continue;
                     // Field 2 LengthDelimited
                     case 18:
-                        if (instance.FriendList == null)
-                            instance.FriendList = global::Server.Ygy.Game.Pb.PBMsgChatFriendDataList.DeserializeLengthDelimited(stream);
-                        else
-                            global::Server.Ygy.Game.Pb.PBMsgChatFriendDataList.DeserializeLengthDelimited(stream, instance.FriendList);
+                        // repeated
+                        instance.Friends.Add(global::Server.Ygy.Game.Pb.PBMsgFriendInfo.DeserializeLengthDelimited(stream));
                         continue;
                 }
 
@@ -1777,7 +1987,2283 @@ namespace Server.Ygy.Game.Pb
         }
 
         /// <summary>Read the VarInt length prefix and the given number of bytes from the stream and deserialze it into the instance.</summary>
-        public static global::Server.Ygy.Game.Pb.PBMsgChatFriendDataResponse DeserializeLengthDelimited(Stream stream, global::Server.Ygy.Game.Pb.PBMsgChatFriendDataResponse instance)
+        public static global::Server.Ygy.Game.Pb.PBMsgUserFriendListResponse DeserializeLengthDelimited(Stream stream, global::Server.Ygy.Game.Pb.PBMsgUserFriendListResponse instance)
+        {
+            if (instance.Friends == null)
+                instance.Friends = new List<global::Server.Ygy.Game.Pb.PBMsgFriendInfo>();
+            long limit = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt32(stream);
+            limit += stream.Position;
+            while (true)
+            {
+                if (stream.Position >= limit)
+                {
+                    if (stream.Position == limit)
+                        break;
+                    else
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Read past max limit");
+                }
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    throw new System.IO.EndOfStreamException();
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 Varint
+                    case 8:
+                        instance.ReturnCode = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    // Field 2 LengthDelimited
+                    case 18:
+                        // repeated
+                        instance.Friends.Add(global::Server.Ygy.Game.Pb.PBMsgFriendInfo.DeserializeLengthDelimited(stream));
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Read the given number of bytes from the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgUserFriendListResponse DeserializeLength(Stream stream, int length, global::Server.Ygy.Game.Pb.PBMsgUserFriendListResponse instance)
+        {
+            if (instance.Friends == null)
+                instance.Friends = new List<global::Server.Ygy.Game.Pb.PBMsgFriendInfo>();
+            long limit = stream.Position + length;
+            while (true)
+            {
+                if (stream.Position >= limit)
+                {
+                    if (stream.Position == limit)
+                        break;
+                    else
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Read past max limit");
+                }
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    throw new System.IO.EndOfStreamException();
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 Varint
+                    case 8:
+                        instance.ReturnCode = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    // Field 2 LengthDelimited
+                    case 18:
+                        // repeated
+                        instance.Friends.Add(global::Server.Ygy.Game.Pb.PBMsgFriendInfo.DeserializeLengthDelimited(stream));
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Serialize the instance into the stream</summary>
+        public static void Serialize(Stream stream, PBMsgUserFriendListResponse instance)
+        {
+            var msField = global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Pop();
+            // Key for field: 1, Varint
+            stream.WriteByte(8);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.ReturnCode);
+            if (instance.Friends != null)
+            {
+                foreach (var i2 in instance.Friends)
+                {
+                    // Key for field: 2, LengthDelimited
+                    stream.WriteByte(18);
+                    ﻿msField.SetLength(0);
+                    global::Server.Ygy.Game.Pb.PBMsgFriendInfo.Serialize(msField, i2);
+                    // Length delimited byte array
+                    uint length2 = (uint)msField.Length;
+                    global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt32(stream, length2);
+                    msField.WriteTo(stream);
+
+                }
+            }
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Push(msField);
+        }
+
+        /// <summary>Helper: Serialize into a MemoryStream and return its byte array</summary>
+        public static byte[] SerializeToBytes(PBMsgUserFriendListResponse instance)
+        {
+            using (var ms = new MemoryStream())
+            {
+                Serialize(ms, instance);
+                return ms.ToArray();
+            }
+        }
+        /// <summary>Helper: Serialize with a varint length prefix</summary>
+        public static void SerializeLengthDelimited(Stream stream, PBMsgUserFriendListResponse instance)
+        {
+            var data = SerializeToBytes(instance);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt32(stream, (uint)data.Length);
+            stream.Write(data, 0, data.Length);
+        }
+    }
+
+    public partial class PBMsgFriendInfo
+    {
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgFriendInfo Deserialize(Stream stream)
+        {
+            var instance = new PBMsgFriendInfo();
+            Deserialize(stream, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgFriendInfo DeserializeLengthDelimited(Stream stream)
+        {
+            var instance = new PBMsgFriendInfo();
+            DeserializeLengthDelimited(stream, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgFriendInfo DeserializeLength(Stream stream, int length)
+        {
+            var instance = new PBMsgFriendInfo();
+            DeserializeLength(stream, length, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: put the buffer into a MemoryStream and create a new instance to deserializing into</summary>
+        public static PBMsgFriendInfo Deserialize(byte[] buffer)
+        {
+            var instance = new PBMsgFriendInfo();
+            using (var ms = new MemoryStream(buffer))
+                Deserialize(ms, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: put the buffer into a MemoryStream before deserializing</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgFriendInfo Deserialize(byte[] buffer, global::Server.Ygy.Game.Pb.PBMsgFriendInfo instance)
+        {
+            using (var ms = new MemoryStream(buffer))
+                Deserialize(ms, instance);
+            return instance;
+        }
+
+        /// <summary>Takes the remaining content of the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgFriendInfo Deserialize(Stream stream, global::Server.Ygy.Game.Pb.PBMsgFriendInfo instance)
+        {
+            while (true)
+            {
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    break;
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 LengthDelimited
+                    case 10:
+                        instance.Account = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 2 LengthDelimited
+                    case 18:
+                        instance.Name = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 3 LengthDelimited
+                    case 26:
+                        instance.UserImg = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Read the VarInt length prefix and the given number of bytes from the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgFriendInfo DeserializeLengthDelimited(Stream stream, global::Server.Ygy.Game.Pb.PBMsgFriendInfo instance)
+        {
+            long limit = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt32(stream);
+            limit += stream.Position;
+            while (true)
+            {
+                if (stream.Position >= limit)
+                {
+                    if (stream.Position == limit)
+                        break;
+                    else
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Read past max limit");
+                }
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    throw new System.IO.EndOfStreamException();
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 LengthDelimited
+                    case 10:
+                        instance.Account = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 2 LengthDelimited
+                    case 18:
+                        instance.Name = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 3 LengthDelimited
+                    case 26:
+                        instance.UserImg = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Read the given number of bytes from the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgFriendInfo DeserializeLength(Stream stream, int length, global::Server.Ygy.Game.Pb.PBMsgFriendInfo instance)
+        {
+            long limit = stream.Position + length;
+            while (true)
+            {
+                if (stream.Position >= limit)
+                {
+                    if (stream.Position == limit)
+                        break;
+                    else
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Read past max limit");
+                }
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    throw new System.IO.EndOfStreamException();
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 LengthDelimited
+                    case 10:
+                        instance.Account = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 2 LengthDelimited
+                    case 18:
+                        instance.Name = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 3 LengthDelimited
+                    case 26:
+                        instance.UserImg = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Serialize the instance into the stream</summary>
+        public static void Serialize(Stream stream, PBMsgFriendInfo instance)
+        {
+            var msField = global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Pop();
+            if (instance.Account != null)
+            {
+                // Key for field: 1, LengthDelimited
+                stream.WriteByte(10);
+                global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.Account));
+            }
+            if (instance.Name != null)
+            {
+                // Key for field: 2, LengthDelimited
+                stream.WriteByte(18);
+                global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.Name));
+            }
+            if (instance.UserImg != null)
+            {
+                // Key for field: 3, LengthDelimited
+                stream.WriteByte(26);
+                global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.UserImg));
+            }
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Push(msField);
+        }
+
+        /// <summary>Helper: Serialize into a MemoryStream and return its byte array</summary>
+        public static byte[] SerializeToBytes(PBMsgFriendInfo instance)
+        {
+            using (var ms = new MemoryStream())
+            {
+                Serialize(ms, instance);
+                return ms.ToArray();
+            }
+        }
+        /// <summary>Helper: Serialize with a varint length prefix</summary>
+        public static void SerializeLengthDelimited(Stream stream, PBMsgFriendInfo instance)
+        {
+            var data = SerializeToBytes(instance);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt32(stream, (uint)data.Length);
+            stream.Write(data, 0, data.Length);
+        }
+    }
+
+    public partial class PBMsgFriendChatMsgLogRequest
+    {
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgFriendChatMsgLogRequest Deserialize(Stream stream)
+        {
+            var instance = new PBMsgFriendChatMsgLogRequest();
+            Deserialize(stream, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgFriendChatMsgLogRequest DeserializeLengthDelimited(Stream stream)
+        {
+            var instance = new PBMsgFriendChatMsgLogRequest();
+            DeserializeLengthDelimited(stream, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgFriendChatMsgLogRequest DeserializeLength(Stream stream, int length)
+        {
+            var instance = new PBMsgFriendChatMsgLogRequest();
+            DeserializeLength(stream, length, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: put the buffer into a MemoryStream and create a new instance to deserializing into</summary>
+        public static PBMsgFriendChatMsgLogRequest Deserialize(byte[] buffer)
+        {
+            var instance = new PBMsgFriendChatMsgLogRequest();
+            using (var ms = new MemoryStream(buffer))
+                Deserialize(ms, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: put the buffer into a MemoryStream before deserializing</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgFriendChatMsgLogRequest Deserialize(byte[] buffer, global::Server.Ygy.Game.Pb.PBMsgFriendChatMsgLogRequest instance)
+        {
+            using (var ms = new MemoryStream(buffer))
+                Deserialize(ms, instance);
+            return instance;
+        }
+
+        /// <summary>Takes the remaining content of the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgFriendChatMsgLogRequest Deserialize(Stream stream, global::Server.Ygy.Game.Pb.PBMsgFriendChatMsgLogRequest instance)
+        {
+            while (true)
+            {
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    break;
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Read the VarInt length prefix and the given number of bytes from the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgFriendChatMsgLogRequest DeserializeLengthDelimited(Stream stream, global::Server.Ygy.Game.Pb.PBMsgFriendChatMsgLogRequest instance)
+        {
+            long limit = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt32(stream);
+            limit += stream.Position;
+            while (true)
+            {
+                if (stream.Position >= limit)
+                {
+                    if (stream.Position == limit)
+                        break;
+                    else
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Read past max limit");
+                }
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    throw new System.IO.EndOfStreamException();
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Read the given number of bytes from the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgFriendChatMsgLogRequest DeserializeLength(Stream stream, int length, global::Server.Ygy.Game.Pb.PBMsgFriendChatMsgLogRequest instance)
+        {
+            long limit = stream.Position + length;
+            while (true)
+            {
+                if (stream.Position >= limit)
+                {
+                    if (stream.Position == limit)
+                        break;
+                    else
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Read past max limit");
+                }
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    throw new System.IO.EndOfStreamException();
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Serialize the instance into the stream</summary>
+        public static void Serialize(Stream stream, PBMsgFriendChatMsgLogRequest instance)
+        {
+            var msField = global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Pop();
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Push(msField);
+        }
+
+        /// <summary>Helper: Serialize into a MemoryStream and return its byte array</summary>
+        public static byte[] SerializeToBytes(PBMsgFriendChatMsgLogRequest instance)
+        {
+            using (var ms = new MemoryStream())
+            {
+                Serialize(ms, instance);
+                return ms.ToArray();
+            }
+        }
+        /// <summary>Helper: Serialize with a varint length prefix</summary>
+        public static void SerializeLengthDelimited(Stream stream, PBMsgFriendChatMsgLogRequest instance)
+        {
+            var data = SerializeToBytes(instance);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt32(stream, (uint)data.Length);
+            stream.Write(data, 0, data.Length);
+        }
+    }
+
+    public partial class PBMsgFriendChatMsgLogResponse
+    {
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgFriendChatMsgLogResponse Deserialize(Stream stream)
+        {
+            var instance = new PBMsgFriendChatMsgLogResponse();
+            Deserialize(stream, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgFriendChatMsgLogResponse DeserializeLengthDelimited(Stream stream)
+        {
+            var instance = new PBMsgFriendChatMsgLogResponse();
+            DeserializeLengthDelimited(stream, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgFriendChatMsgLogResponse DeserializeLength(Stream stream, int length)
+        {
+            var instance = new PBMsgFriendChatMsgLogResponse();
+            DeserializeLength(stream, length, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: put the buffer into a MemoryStream and create a new instance to deserializing into</summary>
+        public static PBMsgFriendChatMsgLogResponse Deserialize(byte[] buffer)
+        {
+            var instance = new PBMsgFriendChatMsgLogResponse();
+            using (var ms = new MemoryStream(buffer))
+                Deserialize(ms, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: put the buffer into a MemoryStream before deserializing</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgFriendChatMsgLogResponse Deserialize(byte[] buffer, global::Server.Ygy.Game.Pb.PBMsgFriendChatMsgLogResponse instance)
+        {
+            using (var ms = new MemoryStream(buffer))
+                Deserialize(ms, instance);
+            return instance;
+        }
+
+        /// <summary>Takes the remaining content of the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgFriendChatMsgLogResponse Deserialize(Stream stream, global::Server.Ygy.Game.Pb.PBMsgFriendChatMsgLogResponse instance)
+        {
+            if (instance.Msgs == null)
+                instance.Msgs = new List<global::Server.Ygy.Game.Pb.PBMsgFriendChatMsg>();
+            while (true)
+            {
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    break;
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 Varint
+                    case 8:
+                        instance.ReturnCode = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    // Field 2 LengthDelimited
+                    case 18:
+                        // repeated
+                        instance.Msgs.Add(global::Server.Ygy.Game.Pb.PBMsgFriendChatMsg.DeserializeLengthDelimited(stream));
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Read the VarInt length prefix and the given number of bytes from the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgFriendChatMsgLogResponse DeserializeLengthDelimited(Stream stream, global::Server.Ygy.Game.Pb.PBMsgFriendChatMsgLogResponse instance)
+        {
+            if (instance.Msgs == null)
+                instance.Msgs = new List<global::Server.Ygy.Game.Pb.PBMsgFriendChatMsg>();
+            long limit = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt32(stream);
+            limit += stream.Position;
+            while (true)
+            {
+                if (stream.Position >= limit)
+                {
+                    if (stream.Position == limit)
+                        break;
+                    else
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Read past max limit");
+                }
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    throw new System.IO.EndOfStreamException();
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 Varint
+                    case 8:
+                        instance.ReturnCode = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    // Field 2 LengthDelimited
+                    case 18:
+                        // repeated
+                        instance.Msgs.Add(global::Server.Ygy.Game.Pb.PBMsgFriendChatMsg.DeserializeLengthDelimited(stream));
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Read the given number of bytes from the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgFriendChatMsgLogResponse DeserializeLength(Stream stream, int length, global::Server.Ygy.Game.Pb.PBMsgFriendChatMsgLogResponse instance)
+        {
+            if (instance.Msgs == null)
+                instance.Msgs = new List<global::Server.Ygy.Game.Pb.PBMsgFriendChatMsg>();
+            long limit = stream.Position + length;
+            while (true)
+            {
+                if (stream.Position >= limit)
+                {
+                    if (stream.Position == limit)
+                        break;
+                    else
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Read past max limit");
+                }
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    throw new System.IO.EndOfStreamException();
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 Varint
+                    case 8:
+                        instance.ReturnCode = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    // Field 2 LengthDelimited
+                    case 18:
+                        // repeated
+                        instance.Msgs.Add(global::Server.Ygy.Game.Pb.PBMsgFriendChatMsg.DeserializeLengthDelimited(stream));
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Serialize the instance into the stream</summary>
+        public static void Serialize(Stream stream, PBMsgFriendChatMsgLogResponse instance)
+        {
+            var msField = global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Pop();
+            // Key for field: 1, Varint
+            stream.WriteByte(8);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.ReturnCode);
+            if (instance.Msgs != null)
+            {
+                foreach (var i2 in instance.Msgs)
+                {
+                    // Key for field: 2, LengthDelimited
+                    stream.WriteByte(18);
+                    ﻿msField.SetLength(0);
+                    global::Server.Ygy.Game.Pb.PBMsgFriendChatMsg.Serialize(msField, i2);
+                    // Length delimited byte array
+                    uint length2 = (uint)msField.Length;
+                    global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt32(stream, length2);
+                    msField.WriteTo(stream);
+
+                }
+            }
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Push(msField);
+        }
+
+        /// <summary>Helper: Serialize into a MemoryStream and return its byte array</summary>
+        public static byte[] SerializeToBytes(PBMsgFriendChatMsgLogResponse instance)
+        {
+            using (var ms = new MemoryStream())
+            {
+                Serialize(ms, instance);
+                return ms.ToArray();
+            }
+        }
+        /// <summary>Helper: Serialize with a varint length prefix</summary>
+        public static void SerializeLengthDelimited(Stream stream, PBMsgFriendChatMsgLogResponse instance)
+        {
+            var data = SerializeToBytes(instance);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt32(stream, (uint)data.Length);
+            stream.Write(data, 0, data.Length);
+        }
+    }
+
+    public partial class PBMsgFriendChatMsg
+    {
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgFriendChatMsg Deserialize(Stream stream)
+        {
+            var instance = new PBMsgFriendChatMsg();
+            Deserialize(stream, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgFriendChatMsg DeserializeLengthDelimited(Stream stream)
+        {
+            var instance = new PBMsgFriendChatMsg();
+            DeserializeLengthDelimited(stream, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgFriendChatMsg DeserializeLength(Stream stream, int length)
+        {
+            var instance = new PBMsgFriendChatMsg();
+            DeserializeLength(stream, length, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: put the buffer into a MemoryStream and create a new instance to deserializing into</summary>
+        public static PBMsgFriendChatMsg Deserialize(byte[] buffer)
+        {
+            var instance = new PBMsgFriendChatMsg();
+            using (var ms = new MemoryStream(buffer))
+                Deserialize(ms, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: put the buffer into a MemoryStream before deserializing</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgFriendChatMsg Deserialize(byte[] buffer, global::Server.Ygy.Game.Pb.PBMsgFriendChatMsg instance)
+        {
+            using (var ms = new MemoryStream(buffer))
+                Deserialize(ms, instance);
+            return instance;
+        }
+
+        /// <summary>Takes the remaining content of the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgFriendChatMsg Deserialize(Stream stream, global::Server.Ygy.Game.Pb.PBMsgFriendChatMsg instance)
+        {
+            if (instance.ChatMsgs == null)
+                instance.ChatMsgs = new List<global::Server.Ygy.Game.Pb.PBMsgChatMsg>();
+            while (true)
+            {
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    break;
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 LengthDelimited
+                    case 10:
+                        instance.Account = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 2 LengthDelimited
+                    case 18:
+                        // repeated
+                        instance.ChatMsgs.Add(global::Server.Ygy.Game.Pb.PBMsgChatMsg.DeserializeLengthDelimited(stream));
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Read the VarInt length prefix and the given number of bytes from the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgFriendChatMsg DeserializeLengthDelimited(Stream stream, global::Server.Ygy.Game.Pb.PBMsgFriendChatMsg instance)
+        {
+            if (instance.ChatMsgs == null)
+                instance.ChatMsgs = new List<global::Server.Ygy.Game.Pb.PBMsgChatMsg>();
+            long limit = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt32(stream);
+            limit += stream.Position;
+            while (true)
+            {
+                if (stream.Position >= limit)
+                {
+                    if (stream.Position == limit)
+                        break;
+                    else
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Read past max limit");
+                }
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    throw new System.IO.EndOfStreamException();
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 LengthDelimited
+                    case 10:
+                        instance.Account = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 2 LengthDelimited
+                    case 18:
+                        // repeated
+                        instance.ChatMsgs.Add(global::Server.Ygy.Game.Pb.PBMsgChatMsg.DeserializeLengthDelimited(stream));
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Read the given number of bytes from the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgFriendChatMsg DeserializeLength(Stream stream, int length, global::Server.Ygy.Game.Pb.PBMsgFriendChatMsg instance)
+        {
+            if (instance.ChatMsgs == null)
+                instance.ChatMsgs = new List<global::Server.Ygy.Game.Pb.PBMsgChatMsg>();
+            long limit = stream.Position + length;
+            while (true)
+            {
+                if (stream.Position >= limit)
+                {
+                    if (stream.Position == limit)
+                        break;
+                    else
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Read past max limit");
+                }
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    throw new System.IO.EndOfStreamException();
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 LengthDelimited
+                    case 10:
+                        instance.Account = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 2 LengthDelimited
+                    case 18:
+                        // repeated
+                        instance.ChatMsgs.Add(global::Server.Ygy.Game.Pb.PBMsgChatMsg.DeserializeLengthDelimited(stream));
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Serialize the instance into the stream</summary>
+        public static void Serialize(Stream stream, PBMsgFriendChatMsg instance)
+        {
+            var msField = global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Pop();
+            if (instance.Account != null)
+            {
+                // Key for field: 1, LengthDelimited
+                stream.WriteByte(10);
+                global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.Account));
+            }
+            if (instance.ChatMsgs != null)
+            {
+                foreach (var i2 in instance.ChatMsgs)
+                {
+                    // Key for field: 2, LengthDelimited
+                    stream.WriteByte(18);
+                    ﻿msField.SetLength(0);
+                    global::Server.Ygy.Game.Pb.PBMsgChatMsg.Serialize(msField, i2);
+                    // Length delimited byte array
+                    uint length2 = (uint)msField.Length;
+                    global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt32(stream, length2);
+                    msField.WriteTo(stream);
+
+                }
+            }
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Push(msField);
+        }
+
+        /// <summary>Helper: Serialize into a MemoryStream and return its byte array</summary>
+        public static byte[] SerializeToBytes(PBMsgFriendChatMsg instance)
+        {
+            using (var ms = new MemoryStream())
+            {
+                Serialize(ms, instance);
+                return ms.ToArray();
+            }
+        }
+        /// <summary>Helper: Serialize with a varint length prefix</summary>
+        public static void SerializeLengthDelimited(Stream stream, PBMsgFriendChatMsg instance)
+        {
+            var data = SerializeToBytes(instance);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt32(stream, (uint)data.Length);
+            stream.Write(data, 0, data.Length);
+        }
+    }
+
+    public partial class PBMsgChatMsg
+    {
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgChatMsg Deserialize(Stream stream)
+        {
+            var instance = new PBMsgChatMsg();
+            Deserialize(stream, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgChatMsg DeserializeLengthDelimited(Stream stream)
+        {
+            var instance = new PBMsgChatMsg();
+            DeserializeLengthDelimited(stream, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgChatMsg DeserializeLength(Stream stream, int length)
+        {
+            var instance = new PBMsgChatMsg();
+            DeserializeLength(stream, length, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: put the buffer into a MemoryStream and create a new instance to deserializing into</summary>
+        public static PBMsgChatMsg Deserialize(byte[] buffer)
+        {
+            var instance = new PBMsgChatMsg();
+            using (var ms = new MemoryStream(buffer))
+                Deserialize(ms, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: put the buffer into a MemoryStream before deserializing</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgChatMsg Deserialize(byte[] buffer, global::Server.Ygy.Game.Pb.PBMsgChatMsg instance)
+        {
+            using (var ms = new MemoryStream(buffer))
+                Deserialize(ms, instance);
+            return instance;
+        }
+
+        /// <summary>Takes the remaining content of the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgChatMsg Deserialize(Stream stream, global::Server.Ygy.Game.Pb.PBMsgChatMsg instance)
+        {
+            while (true)
+            {
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    break;
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 LengthDelimited
+                    case 10:
+                        instance.Msg = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 2 Varint
+                    case 16:
+                        instance.Date = (long)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Read the VarInt length prefix and the given number of bytes from the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgChatMsg DeserializeLengthDelimited(Stream stream, global::Server.Ygy.Game.Pb.PBMsgChatMsg instance)
+        {
+            long limit = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt32(stream);
+            limit += stream.Position;
+            while (true)
+            {
+                if (stream.Position >= limit)
+                {
+                    if (stream.Position == limit)
+                        break;
+                    else
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Read past max limit");
+                }
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    throw new System.IO.EndOfStreamException();
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 LengthDelimited
+                    case 10:
+                        instance.Msg = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 2 Varint
+                    case 16:
+                        instance.Date = (long)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Read the given number of bytes from the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgChatMsg DeserializeLength(Stream stream, int length, global::Server.Ygy.Game.Pb.PBMsgChatMsg instance)
+        {
+            long limit = stream.Position + length;
+            while (true)
+            {
+                if (stream.Position >= limit)
+                {
+                    if (stream.Position == limit)
+                        break;
+                    else
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Read past max limit");
+                }
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    throw new System.IO.EndOfStreamException();
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 LengthDelimited
+                    case 10:
+                        instance.Msg = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 2 Varint
+                    case 16:
+                        instance.Date = (long)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Serialize the instance into the stream</summary>
+        public static void Serialize(Stream stream, PBMsgChatMsg instance)
+        {
+            var msField = global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Pop();
+            if (instance.Msg != null)
+            {
+                // Key for field: 1, LengthDelimited
+                stream.WriteByte(10);
+                global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.Msg));
+            }
+            // Key for field: 2, Varint
+            stream.WriteByte(16);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.Date);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Push(msField);
+        }
+
+        /// <summary>Helper: Serialize into a MemoryStream and return its byte array</summary>
+        public static byte[] SerializeToBytes(PBMsgChatMsg instance)
+        {
+            using (var ms = new MemoryStream())
+            {
+                Serialize(ms, instance);
+                return ms.ToArray();
+            }
+        }
+        /// <summary>Helper: Serialize with a varint length prefix</summary>
+        public static void SerializeLengthDelimited(Stream stream, PBMsgChatMsg instance)
+        {
+            var data = SerializeToBytes(instance);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt32(stream, (uint)data.Length);
+            stream.Write(data, 0, data.Length);
+        }
+    }
+
+    public partial class PBMsgSelfSendChatMsgLogRequest
+    {
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgSelfSendChatMsgLogRequest Deserialize(Stream stream)
+        {
+            var instance = new PBMsgSelfSendChatMsgLogRequest();
+            Deserialize(stream, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgSelfSendChatMsgLogRequest DeserializeLengthDelimited(Stream stream)
+        {
+            var instance = new PBMsgSelfSendChatMsgLogRequest();
+            DeserializeLengthDelimited(stream, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgSelfSendChatMsgLogRequest DeserializeLength(Stream stream, int length)
+        {
+            var instance = new PBMsgSelfSendChatMsgLogRequest();
+            DeserializeLength(stream, length, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: put the buffer into a MemoryStream and create a new instance to deserializing into</summary>
+        public static PBMsgSelfSendChatMsgLogRequest Deserialize(byte[] buffer)
+        {
+            var instance = new PBMsgSelfSendChatMsgLogRequest();
+            using (var ms = new MemoryStream(buffer))
+                Deserialize(ms, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: put the buffer into a MemoryStream before deserializing</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgSelfSendChatMsgLogRequest Deserialize(byte[] buffer, global::Server.Ygy.Game.Pb.PBMsgSelfSendChatMsgLogRequest instance)
+        {
+            using (var ms = new MemoryStream(buffer))
+                Deserialize(ms, instance);
+            return instance;
+        }
+
+        /// <summary>Takes the remaining content of the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgSelfSendChatMsgLogRequest Deserialize(Stream stream, global::Server.Ygy.Game.Pb.PBMsgSelfSendChatMsgLogRequest instance)
+        {
+            while (true)
+            {
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    break;
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Read the VarInt length prefix and the given number of bytes from the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgSelfSendChatMsgLogRequest DeserializeLengthDelimited(Stream stream, global::Server.Ygy.Game.Pb.PBMsgSelfSendChatMsgLogRequest instance)
+        {
+            long limit = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt32(stream);
+            limit += stream.Position;
+            while (true)
+            {
+                if (stream.Position >= limit)
+                {
+                    if (stream.Position == limit)
+                        break;
+                    else
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Read past max limit");
+                }
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    throw new System.IO.EndOfStreamException();
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Read the given number of bytes from the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgSelfSendChatMsgLogRequest DeserializeLength(Stream stream, int length, global::Server.Ygy.Game.Pb.PBMsgSelfSendChatMsgLogRequest instance)
+        {
+            long limit = stream.Position + length;
+            while (true)
+            {
+                if (stream.Position >= limit)
+                {
+                    if (stream.Position == limit)
+                        break;
+                    else
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Read past max limit");
+                }
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    throw new System.IO.EndOfStreamException();
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Serialize the instance into the stream</summary>
+        public static void Serialize(Stream stream, PBMsgSelfSendChatMsgLogRequest instance)
+        {
+            var msField = global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Pop();
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Push(msField);
+        }
+
+        /// <summary>Helper: Serialize into a MemoryStream and return its byte array</summary>
+        public static byte[] SerializeToBytes(PBMsgSelfSendChatMsgLogRequest instance)
+        {
+            using (var ms = new MemoryStream())
+            {
+                Serialize(ms, instance);
+                return ms.ToArray();
+            }
+        }
+        /// <summary>Helper: Serialize with a varint length prefix</summary>
+        public static void SerializeLengthDelimited(Stream stream, PBMsgSelfSendChatMsgLogRequest instance)
+        {
+            var data = SerializeToBytes(instance);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt32(stream, (uint)data.Length);
+            stream.Write(data, 0, data.Length);
+        }
+    }
+
+    public partial class PBMsgSelfSendChatMsgLogResponse
+    {
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgSelfSendChatMsgLogResponse Deserialize(Stream stream)
+        {
+            var instance = new PBMsgSelfSendChatMsgLogResponse();
+            Deserialize(stream, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgSelfSendChatMsgLogResponse DeserializeLengthDelimited(Stream stream)
+        {
+            var instance = new PBMsgSelfSendChatMsgLogResponse();
+            DeserializeLengthDelimited(stream, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgSelfSendChatMsgLogResponse DeserializeLength(Stream stream, int length)
+        {
+            var instance = new PBMsgSelfSendChatMsgLogResponse();
+            DeserializeLength(stream, length, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: put the buffer into a MemoryStream and create a new instance to deserializing into</summary>
+        public static PBMsgSelfSendChatMsgLogResponse Deserialize(byte[] buffer)
+        {
+            var instance = new PBMsgSelfSendChatMsgLogResponse();
+            using (var ms = new MemoryStream(buffer))
+                Deserialize(ms, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: put the buffer into a MemoryStream before deserializing</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgSelfSendChatMsgLogResponse Deserialize(byte[] buffer, global::Server.Ygy.Game.Pb.PBMsgSelfSendChatMsgLogResponse instance)
+        {
+            using (var ms = new MemoryStream(buffer))
+                Deserialize(ms, instance);
+            return instance;
+        }
+
+        /// <summary>Takes the remaining content of the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgSelfSendChatMsgLogResponse Deserialize(Stream stream, global::Server.Ygy.Game.Pb.PBMsgSelfSendChatMsgLogResponse instance)
+        {
+            if (instance.Msgs == null)
+                instance.Msgs = new List<global::Server.Ygy.Game.Pb.PBMsgFriendChatMsg>();
+            while (true)
+            {
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    break;
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 Varint
+                    case 8:
+                        instance.ReturnCode = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    // Field 2 LengthDelimited
+                    case 18:
+                        // repeated
+                        instance.Msgs.Add(global::Server.Ygy.Game.Pb.PBMsgFriendChatMsg.DeserializeLengthDelimited(stream));
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Read the VarInt length prefix and the given number of bytes from the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgSelfSendChatMsgLogResponse DeserializeLengthDelimited(Stream stream, global::Server.Ygy.Game.Pb.PBMsgSelfSendChatMsgLogResponse instance)
+        {
+            if (instance.Msgs == null)
+                instance.Msgs = new List<global::Server.Ygy.Game.Pb.PBMsgFriendChatMsg>();
+            long limit = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt32(stream);
+            limit += stream.Position;
+            while (true)
+            {
+                if (stream.Position >= limit)
+                {
+                    if (stream.Position == limit)
+                        break;
+                    else
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Read past max limit");
+                }
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    throw new System.IO.EndOfStreamException();
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 Varint
+                    case 8:
+                        instance.ReturnCode = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    // Field 2 LengthDelimited
+                    case 18:
+                        // repeated
+                        instance.Msgs.Add(global::Server.Ygy.Game.Pb.PBMsgFriendChatMsg.DeserializeLengthDelimited(stream));
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Read the given number of bytes from the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgSelfSendChatMsgLogResponse DeserializeLength(Stream stream, int length, global::Server.Ygy.Game.Pb.PBMsgSelfSendChatMsgLogResponse instance)
+        {
+            if (instance.Msgs == null)
+                instance.Msgs = new List<global::Server.Ygy.Game.Pb.PBMsgFriendChatMsg>();
+            long limit = stream.Position + length;
+            while (true)
+            {
+                if (stream.Position >= limit)
+                {
+                    if (stream.Position == limit)
+                        break;
+                    else
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Read past max limit");
+                }
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    throw new System.IO.EndOfStreamException();
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 Varint
+                    case 8:
+                        instance.ReturnCode = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    // Field 2 LengthDelimited
+                    case 18:
+                        // repeated
+                        instance.Msgs.Add(global::Server.Ygy.Game.Pb.PBMsgFriendChatMsg.DeserializeLengthDelimited(stream));
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Serialize the instance into the stream</summary>
+        public static void Serialize(Stream stream, PBMsgSelfSendChatMsgLogResponse instance)
+        {
+            var msField = global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Pop();
+            // Key for field: 1, Varint
+            stream.WriteByte(8);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.ReturnCode);
+            if (instance.Msgs != null)
+            {
+                foreach (var i2 in instance.Msgs)
+                {
+                    // Key for field: 2, LengthDelimited
+                    stream.WriteByte(18);
+                    ﻿msField.SetLength(0);
+                    global::Server.Ygy.Game.Pb.PBMsgFriendChatMsg.Serialize(msField, i2);
+                    // Length delimited byte array
+                    uint length2 = (uint)msField.Length;
+                    global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt32(stream, length2);
+                    msField.WriteTo(stream);
+
+                }
+            }
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Push(msField);
+        }
+
+        /// <summary>Helper: Serialize into a MemoryStream and return its byte array</summary>
+        public static byte[] SerializeToBytes(PBMsgSelfSendChatMsgLogResponse instance)
+        {
+            using (var ms = new MemoryStream())
+            {
+                Serialize(ms, instance);
+                return ms.ToArray();
+            }
+        }
+        /// <summary>Helper: Serialize with a varint length prefix</summary>
+        public static void SerializeLengthDelimited(Stream stream, PBMsgSelfSendChatMsgLogResponse instance)
+        {
+            var data = SerializeToBytes(instance);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt32(stream, (uint)data.Length);
+            stream.Write(data, 0, data.Length);
+        }
+    }
+
+    public partial class PBMsgSelectUserDataRequest
+    {
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgSelectUserDataRequest Deserialize(Stream stream)
+        {
+            var instance = new PBMsgSelectUserDataRequest();
+            Deserialize(stream, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgSelectUserDataRequest DeserializeLengthDelimited(Stream stream)
+        {
+            var instance = new PBMsgSelectUserDataRequest();
+            DeserializeLengthDelimited(stream, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgSelectUserDataRequest DeserializeLength(Stream stream, int length)
+        {
+            var instance = new PBMsgSelectUserDataRequest();
+            DeserializeLength(stream, length, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: put the buffer into a MemoryStream and create a new instance to deserializing into</summary>
+        public static PBMsgSelectUserDataRequest Deserialize(byte[] buffer)
+        {
+            var instance = new PBMsgSelectUserDataRequest();
+            using (var ms = new MemoryStream(buffer))
+                Deserialize(ms, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: put the buffer into a MemoryStream before deserializing</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgSelectUserDataRequest Deserialize(byte[] buffer, global::Server.Ygy.Game.Pb.PBMsgSelectUserDataRequest instance)
+        {
+            using (var ms = new MemoryStream(buffer))
+                Deserialize(ms, instance);
+            return instance;
+        }
+
+        /// <summary>Takes the remaining content of the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgSelectUserDataRequest Deserialize(Stream stream, global::Server.Ygy.Game.Pb.PBMsgSelectUserDataRequest instance)
+        {
+            while (true)
+            {
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    break;
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 LengthDelimited
+                    case 10:
+                        instance.Account = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 2 LengthDelimited
+                    case 18:
+                        instance.Name = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Read the VarInt length prefix and the given number of bytes from the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgSelectUserDataRequest DeserializeLengthDelimited(Stream stream, global::Server.Ygy.Game.Pb.PBMsgSelectUserDataRequest instance)
+        {
+            long limit = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt32(stream);
+            limit += stream.Position;
+            while (true)
+            {
+                if (stream.Position >= limit)
+                {
+                    if (stream.Position == limit)
+                        break;
+                    else
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Read past max limit");
+                }
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    throw new System.IO.EndOfStreamException();
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 LengthDelimited
+                    case 10:
+                        instance.Account = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 2 LengthDelimited
+                    case 18:
+                        instance.Name = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Read the given number of bytes from the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgSelectUserDataRequest DeserializeLength(Stream stream, int length, global::Server.Ygy.Game.Pb.PBMsgSelectUserDataRequest instance)
+        {
+            long limit = stream.Position + length;
+            while (true)
+            {
+                if (stream.Position >= limit)
+                {
+                    if (stream.Position == limit)
+                        break;
+                    else
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Read past max limit");
+                }
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    throw new System.IO.EndOfStreamException();
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 LengthDelimited
+                    case 10:
+                        instance.Account = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 2 LengthDelimited
+                    case 18:
+                        instance.Name = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Serialize the instance into the stream</summary>
+        public static void Serialize(Stream stream, PBMsgSelectUserDataRequest instance)
+        {
+            var msField = global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Pop();
+            if (instance.Account != null)
+            {
+                // Key for field: 1, LengthDelimited
+                stream.WriteByte(10);
+                global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.Account));
+            }
+            if (instance.Name != null)
+            {
+                // Key for field: 2, LengthDelimited
+                stream.WriteByte(18);
+                global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.Name));
+            }
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Push(msField);
+        }
+
+        /// <summary>Helper: Serialize into a MemoryStream and return its byte array</summary>
+        public static byte[] SerializeToBytes(PBMsgSelectUserDataRequest instance)
+        {
+            using (var ms = new MemoryStream())
+            {
+                Serialize(ms, instance);
+                return ms.ToArray();
+            }
+        }
+        /// <summary>Helper: Serialize with a varint length prefix</summary>
+        public static void SerializeLengthDelimited(Stream stream, PBMsgSelectUserDataRequest instance)
+        {
+            var data = SerializeToBytes(instance);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt32(stream, (uint)data.Length);
+            stream.Write(data, 0, data.Length);
+        }
+    }
+
+    public partial class PBMsgSelectUserDataResponse
+    {
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgSelectUserDataResponse Deserialize(Stream stream)
+        {
+            var instance = new PBMsgSelectUserDataResponse();
+            Deserialize(stream, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgSelectUserDataResponse DeserializeLengthDelimited(Stream stream)
+        {
+            var instance = new PBMsgSelectUserDataResponse();
+            DeserializeLengthDelimited(stream, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgSelectUserDataResponse DeserializeLength(Stream stream, int length)
+        {
+            var instance = new PBMsgSelectUserDataResponse();
+            DeserializeLength(stream, length, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: put the buffer into a MemoryStream and create a new instance to deserializing into</summary>
+        public static PBMsgSelectUserDataResponse Deserialize(byte[] buffer)
+        {
+            var instance = new PBMsgSelectUserDataResponse();
+            using (var ms = new MemoryStream(buffer))
+                Deserialize(ms, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: put the buffer into a MemoryStream before deserializing</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgSelectUserDataResponse Deserialize(byte[] buffer, global::Server.Ygy.Game.Pb.PBMsgSelectUserDataResponse instance)
+        {
+            using (var ms = new MemoryStream(buffer))
+                Deserialize(ms, instance);
+            return instance;
+        }
+
+        /// <summary>Takes the remaining content of the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgSelectUserDataResponse Deserialize(Stream stream, global::Server.Ygy.Game.Pb.PBMsgSelectUserDataResponse instance)
+        {
+            if (instance.Users == null)
+                instance.Users = new List<global::Server.Ygy.Game.Pb.PBMsgFriendInfo>();
+            while (true)
+            {
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    break;
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 Varint
+                    case 8:
+                        instance.ReturnCode = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    // Field 2 LengthDelimited
+                    case 18:
+                        // repeated
+                        instance.Users.Add(global::Server.Ygy.Game.Pb.PBMsgFriendInfo.DeserializeLengthDelimited(stream));
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Read the VarInt length prefix and the given number of bytes from the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgSelectUserDataResponse DeserializeLengthDelimited(Stream stream, global::Server.Ygy.Game.Pb.PBMsgSelectUserDataResponse instance)
+        {
+            if (instance.Users == null)
+                instance.Users = new List<global::Server.Ygy.Game.Pb.PBMsgFriendInfo>();
+            long limit = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt32(stream);
+            limit += stream.Position;
+            while (true)
+            {
+                if (stream.Position >= limit)
+                {
+                    if (stream.Position == limit)
+                        break;
+                    else
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Read past max limit");
+                }
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    throw new System.IO.EndOfStreamException();
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 Varint
+                    case 8:
+                        instance.ReturnCode = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    // Field 2 LengthDelimited
+                    case 18:
+                        // repeated
+                        instance.Users.Add(global::Server.Ygy.Game.Pb.PBMsgFriendInfo.DeserializeLengthDelimited(stream));
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Read the given number of bytes from the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgSelectUserDataResponse DeserializeLength(Stream stream, int length, global::Server.Ygy.Game.Pb.PBMsgSelectUserDataResponse instance)
+        {
+            if (instance.Users == null)
+                instance.Users = new List<global::Server.Ygy.Game.Pb.PBMsgFriendInfo>();
+            long limit = stream.Position + length;
+            while (true)
+            {
+                if (stream.Position >= limit)
+                {
+                    if (stream.Position == limit)
+                        break;
+                    else
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Read past max limit");
+                }
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    throw new System.IO.EndOfStreamException();
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 Varint
+                    case 8:
+                        instance.ReturnCode = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    // Field 2 LengthDelimited
+                    case 18:
+                        // repeated
+                        instance.Users.Add(global::Server.Ygy.Game.Pb.PBMsgFriendInfo.DeserializeLengthDelimited(stream));
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Serialize the instance into the stream</summary>
+        public static void Serialize(Stream stream, PBMsgSelectUserDataResponse instance)
+        {
+            var msField = global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Pop();
+            // Key for field: 1, Varint
+            stream.WriteByte(8);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.ReturnCode);
+            if (instance.Users != null)
+            {
+                foreach (var i2 in instance.Users)
+                {
+                    // Key for field: 2, LengthDelimited
+                    stream.WriteByte(18);
+                    ﻿msField.SetLength(0);
+                    global::Server.Ygy.Game.Pb.PBMsgFriendInfo.Serialize(msField, i2);
+                    // Length delimited byte array
+                    uint length2 = (uint)msField.Length;
+                    global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt32(stream, length2);
+                    msField.WriteTo(stream);
+
+                }
+            }
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Push(msField);
+        }
+
+        /// <summary>Helper: Serialize into a MemoryStream and return its byte array</summary>
+        public static byte[] SerializeToBytes(PBMsgSelectUserDataResponse instance)
+        {
+            using (var ms = new MemoryStream())
+            {
+                Serialize(ms, instance);
+                return ms.ToArray();
+            }
+        }
+        /// <summary>Helper: Serialize with a varint length prefix</summary>
+        public static void SerializeLengthDelimited(Stream stream, PBMsgSelectUserDataResponse instance)
+        {
+            var data = SerializeToBytes(instance);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt32(stream, (uint)data.Length);
+            stream.Write(data, 0, data.Length);
+        }
+    }
+
+    public partial class PBMsgAnswerAddFriendRequest
+    {
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgAnswerAddFriendRequest Deserialize(Stream stream)
+        {
+            var instance = new PBMsgAnswerAddFriendRequest();
+            Deserialize(stream, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgAnswerAddFriendRequest DeserializeLengthDelimited(Stream stream)
+        {
+            var instance = new PBMsgAnswerAddFriendRequest();
+            DeserializeLengthDelimited(stream, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgAnswerAddFriendRequest DeserializeLength(Stream stream, int length)
+        {
+            var instance = new PBMsgAnswerAddFriendRequest();
+            DeserializeLength(stream, length, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: put the buffer into a MemoryStream and create a new instance to deserializing into</summary>
+        public static PBMsgAnswerAddFriendRequest Deserialize(byte[] buffer)
+        {
+            var instance = new PBMsgAnswerAddFriendRequest();
+            using (var ms = new MemoryStream(buffer))
+                Deserialize(ms, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: put the buffer into a MemoryStream before deserializing</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgAnswerAddFriendRequest Deserialize(byte[] buffer, global::Server.Ygy.Game.Pb.PBMsgAnswerAddFriendRequest instance)
+        {
+            using (var ms = new MemoryStream(buffer))
+                Deserialize(ms, instance);
+            return instance;
+        }
+
+        /// <summary>Takes the remaining content of the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgAnswerAddFriendRequest Deserialize(Stream stream, global::Server.Ygy.Game.Pb.PBMsgAnswerAddFriendRequest instance)
+        {
+            while (true)
+            {
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    break;
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 LengthDelimited
+                    case 10:
+                        instance.AnswerAccount = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 2 Varint
+                    case 16:
+                        instance.Result = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadBool(stream);
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Read the VarInt length prefix and the given number of bytes from the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgAnswerAddFriendRequest DeserializeLengthDelimited(Stream stream, global::Server.Ygy.Game.Pb.PBMsgAnswerAddFriendRequest instance)
+        {
+            long limit = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt32(stream);
+            limit += stream.Position;
+            while (true)
+            {
+                if (stream.Position >= limit)
+                {
+                    if (stream.Position == limit)
+                        break;
+                    else
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Read past max limit");
+                }
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    throw new System.IO.EndOfStreamException();
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 LengthDelimited
+                    case 10:
+                        instance.AnswerAccount = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 2 Varint
+                    case 16:
+                        instance.Result = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadBool(stream);
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Read the given number of bytes from the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgAnswerAddFriendRequest DeserializeLength(Stream stream, int length, global::Server.Ygy.Game.Pb.PBMsgAnswerAddFriendRequest instance)
+        {
+            long limit = stream.Position + length;
+            while (true)
+            {
+                if (stream.Position >= limit)
+                {
+                    if (stream.Position == limit)
+                        break;
+                    else
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Read past max limit");
+                }
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    throw new System.IO.EndOfStreamException();
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 LengthDelimited
+                    case 10:
+                        instance.AnswerAccount = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 2 Varint
+                    case 16:
+                        instance.Result = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadBool(stream);
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Serialize the instance into the stream</summary>
+        public static void Serialize(Stream stream, PBMsgAnswerAddFriendRequest instance)
+        {
+            var msField = global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Pop();
+            if (instance.AnswerAccount != null)
+            {
+                // Key for field: 1, LengthDelimited
+                stream.WriteByte(10);
+                global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.AnswerAccount));
+            }
+            // Key for field: 2, Varint
+            stream.WriteByte(16);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBool(stream, instance.Result);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Push(msField);
+        }
+
+        /// <summary>Helper: Serialize into a MemoryStream and return its byte array</summary>
+        public static byte[] SerializeToBytes(PBMsgAnswerAddFriendRequest instance)
+        {
+            using (var ms = new MemoryStream())
+            {
+                Serialize(ms, instance);
+                return ms.ToArray();
+            }
+        }
+        /// <summary>Helper: Serialize with a varint length prefix</summary>
+        public static void SerializeLengthDelimited(Stream stream, PBMsgAnswerAddFriendRequest instance)
+        {
+            var data = SerializeToBytes(instance);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt32(stream, (uint)data.Length);
+            stream.Write(data, 0, data.Length);
+        }
+    }
+
+    public partial class PBMsgAnswerAddFriendResponse
+    {
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgAnswerAddFriendResponse Deserialize(Stream stream)
+        {
+            var instance = new PBMsgAnswerAddFriendResponse();
+            Deserialize(stream, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgAnswerAddFriendResponse DeserializeLengthDelimited(Stream stream)
+        {
+            var instance = new PBMsgAnswerAddFriendResponse();
+            DeserializeLengthDelimited(stream, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static PBMsgAnswerAddFriendResponse DeserializeLength(Stream stream, int length)
+        {
+            var instance = new PBMsgAnswerAddFriendResponse();
+            DeserializeLength(stream, length, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: put the buffer into a MemoryStream and create a new instance to deserializing into</summary>
+        public static PBMsgAnswerAddFriendResponse Deserialize(byte[] buffer)
+        {
+            var instance = new PBMsgAnswerAddFriendResponse();
+            using (var ms = new MemoryStream(buffer))
+                Deserialize(ms, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: put the buffer into a MemoryStream before deserializing</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgAnswerAddFriendResponse Deserialize(byte[] buffer, global::Server.Ygy.Game.Pb.PBMsgAnswerAddFriendResponse instance)
+        {
+            using (var ms = new MemoryStream(buffer))
+                Deserialize(ms, instance);
+            return instance;
+        }
+
+        /// <summary>Takes the remaining content of the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgAnswerAddFriendResponse Deserialize(Stream stream, global::Server.Ygy.Game.Pb.PBMsgAnswerAddFriendResponse instance)
+        {
+            while (true)
+            {
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    break;
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 Varint
+                    case 8:
+                        instance.ReturnCode = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    // Field 2 LengthDelimited
+                    case 18:
+                        if (instance.FriendInfo == null)
+                            instance.FriendInfo = global::Server.Ygy.Game.Pb.PBMsgFriendInfo.DeserializeLengthDelimited(stream);
+                        else
+                            global::Server.Ygy.Game.Pb.PBMsgFriendInfo.DeserializeLengthDelimited(stream, instance.FriendInfo);
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Read the VarInt length prefix and the given number of bytes from the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Pb.PBMsgAnswerAddFriendResponse DeserializeLengthDelimited(Stream stream, global::Server.Ygy.Game.Pb.PBMsgAnswerAddFriendResponse instance)
         {
             long limit = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt32(stream);
             limit += stream.Position;
@@ -1802,10 +4288,10 @@ namespace Server.Ygy.Game.Pb
                         continue;
                     // Field 2 LengthDelimited
                     case 18:
-                        if (instance.FriendList == null)
-                            instance.FriendList = global::Server.Ygy.Game.Pb.PBMsgChatFriendDataList.DeserializeLengthDelimited(stream);
+                        if (instance.FriendInfo == null)
+                            instance.FriendInfo = global::Server.Ygy.Game.Pb.PBMsgFriendInfo.DeserializeLengthDelimited(stream);
                         else
-                            global::Server.Ygy.Game.Pb.PBMsgChatFriendDataList.DeserializeLengthDelimited(stream, instance.FriendList);
+                            global::Server.Ygy.Game.Pb.PBMsgFriendInfo.DeserializeLengthDelimited(stream, instance.FriendInfo);
                         continue;
                 }
 
@@ -1826,7 +4312,7 @@ namespace Server.Ygy.Game.Pb
         }
 
         /// <summary>Read the given number of bytes from the stream and deserialze it into the instance.</summary>
-        public static global::Server.Ygy.Game.Pb.PBMsgChatFriendDataResponse DeserializeLength(Stream stream, int length, global::Server.Ygy.Game.Pb.PBMsgChatFriendDataResponse instance)
+        public static global::Server.Ygy.Game.Pb.PBMsgAnswerAddFriendResponse DeserializeLength(Stream stream, int length, global::Server.Ygy.Game.Pb.PBMsgAnswerAddFriendResponse instance)
         {
             long limit = stream.Position + length;
             while (true)
@@ -1850,10 +4336,10 @@ namespace Server.Ygy.Game.Pb
                         continue;
                     // Field 2 LengthDelimited
                     case 18:
-                        if (instance.FriendList == null)
-                            instance.FriendList = global::Server.Ygy.Game.Pb.PBMsgChatFriendDataList.DeserializeLengthDelimited(stream);
+                        if (instance.FriendInfo == null)
+                            instance.FriendInfo = global::Server.Ygy.Game.Pb.PBMsgFriendInfo.DeserializeLengthDelimited(stream);
                         else
-                            global::Server.Ygy.Game.Pb.PBMsgChatFriendDataList.DeserializeLengthDelimited(stream, instance.FriendList);
+                            global::Server.Ygy.Game.Pb.PBMsgFriendInfo.DeserializeLengthDelimited(stream, instance.FriendInfo);
                         continue;
                 }
 
@@ -1874,18 +4360,18 @@ namespace Server.Ygy.Game.Pb
         }
 
         /// <summary>Serialize the instance into the stream</summary>
-        public static void Serialize(Stream stream, PBMsgChatFriendDataResponse instance)
+        public static void Serialize(Stream stream, PBMsgAnswerAddFriendResponse instance)
         {
             var msField = global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Pop();
             // Key for field: 1, Varint
             stream.WriteByte(8);
             global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.ReturnCode);
-            if (instance.FriendList != null)
+            if (instance.FriendInfo != null)
             {
                 // Key for field: 2, LengthDelimited
                 stream.WriteByte(18);
                 ﻿msField.SetLength(0);
-                global::Server.Ygy.Game.Pb.PBMsgChatFriendDataList.Serialize(msField, instance.FriendList);
+                global::Server.Ygy.Game.Pb.PBMsgFriendInfo.Serialize(msField, instance.FriendInfo);
                 // Length delimited byte array
                 uint length2 = (uint)msField.Length;
                 global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt32(stream, length2);
@@ -1896,7 +4382,7 @@ namespace Server.Ygy.Game.Pb
         }
 
         /// <summary>Helper: Serialize into a MemoryStream and return its byte array</summary>
-        public static byte[] SerializeToBytes(PBMsgChatFriendDataResponse instance)
+        public static byte[] SerializeToBytes(PBMsgAnswerAddFriendResponse instance)
         {
             using (var ms = new MemoryStream())
             {
@@ -1905,7 +4391,7 @@ namespace Server.Ygy.Game.Pb
             }
         }
         /// <summary>Helper: Serialize with a varint length prefix</summary>
-        public static void SerializeLengthDelimited(Stream stream, PBMsgChatFriendDataResponse instance)
+        public static void SerializeLengthDelimited(Stream stream, PBMsgAnswerAddFriendResponse instance)
         {
             var data = SerializeToBytes(instance);
             global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt32(stream, (uint)data.Length);
@@ -1913,43 +4399,43 @@ namespace Server.Ygy.Game.Pb
         }
     }
 
-    public partial class PBMsgChatFriendDataList
+    public partial class PBMsgAnswerAddFriendNotify
     {
         /// <summary>Helper: create a new instance to deserializing into</summary>
-        public static PBMsgChatFriendDataList Deserialize(Stream stream)
+        public static PBMsgAnswerAddFriendNotify Deserialize(Stream stream)
         {
-            var instance = new PBMsgChatFriendDataList();
+            var instance = new PBMsgAnswerAddFriendNotify();
             Deserialize(stream, instance);
             return instance;
         }
 
         /// <summary>Helper: create a new instance to deserializing into</summary>
-        public static PBMsgChatFriendDataList DeserializeLengthDelimited(Stream stream)
+        public static PBMsgAnswerAddFriendNotify DeserializeLengthDelimited(Stream stream)
         {
-            var instance = new PBMsgChatFriendDataList();
+            var instance = new PBMsgAnswerAddFriendNotify();
             DeserializeLengthDelimited(stream, instance);
             return instance;
         }
 
         /// <summary>Helper: create a new instance to deserializing into</summary>
-        public static PBMsgChatFriendDataList DeserializeLength(Stream stream, int length)
+        public static PBMsgAnswerAddFriendNotify DeserializeLength(Stream stream, int length)
         {
-            var instance = new PBMsgChatFriendDataList();
+            var instance = new PBMsgAnswerAddFriendNotify();
             DeserializeLength(stream, length, instance);
             return instance;
         }
 
         /// <summary>Helper: put the buffer into a MemoryStream and create a new instance to deserializing into</summary>
-        public static PBMsgChatFriendDataList Deserialize(byte[] buffer)
+        public static PBMsgAnswerAddFriendNotify Deserialize(byte[] buffer)
         {
-            var instance = new PBMsgChatFriendDataList();
+            var instance = new PBMsgAnswerAddFriendNotify();
             using (var ms = new MemoryStream(buffer))
                 Deserialize(ms, instance);
             return instance;
         }
 
         /// <summary>Helper: put the buffer into a MemoryStream before deserializing</summary>
-        public static global::Server.Ygy.Game.Pb.PBMsgChatFriendDataList Deserialize(byte[] buffer, global::Server.Ygy.Game.Pb.PBMsgChatFriendDataList instance)
+        public static global::Server.Ygy.Game.Pb.PBMsgAnswerAddFriendNotify Deserialize(byte[] buffer, global::Server.Ygy.Game.Pb.PBMsgAnswerAddFriendNotify instance)
         {
             using (var ms = new MemoryStream(buffer))
                 Deserialize(ms, instance);
@@ -1957,10 +4443,8 @@ namespace Server.Ygy.Game.Pb
         }
 
         /// <summary>Takes the remaining content of the stream and deserialze it into the instance.</summary>
-        public static global::Server.Ygy.Game.Pb.PBMsgChatFriendDataList Deserialize(Stream stream, global::Server.Ygy.Game.Pb.PBMsgChatFriendDataList instance)
+        public static global::Server.Ygy.Game.Pb.PBMsgAnswerAddFriendNotify Deserialize(Stream stream, global::Server.Ygy.Game.Pb.PBMsgAnswerAddFriendNotify instance)
         {
-            if (instance.Friends == null)
-                instance.Friends = new List<string>();
             while (true)
             {
                 int keyByte = stream.ReadByte();
@@ -1971,8 +4455,10 @@ namespace Server.Ygy.Game.Pb
                 {
                     // Field 1 LengthDelimited
                     case 10:
-                        // repeated
-                        instance.Friends.Add(global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream));
+                        if (instance.AddFriendInfo == null)
+                            instance.AddFriendInfo = global::Server.Ygy.Game.Pb.PBMsgFriendInfo.DeserializeLengthDelimited(stream);
+                        else
+                            global::Server.Ygy.Game.Pb.PBMsgFriendInfo.DeserializeLengthDelimited(stream, instance.AddFriendInfo);
                         continue;
                 }
 
@@ -1993,10 +4479,8 @@ namespace Server.Ygy.Game.Pb
         }
 
         /// <summary>Read the VarInt length prefix and the given number of bytes from the stream and deserialze it into the instance.</summary>
-        public static global::Server.Ygy.Game.Pb.PBMsgChatFriendDataList DeserializeLengthDelimited(Stream stream, global::Server.Ygy.Game.Pb.PBMsgChatFriendDataList instance)
+        public static global::Server.Ygy.Game.Pb.PBMsgAnswerAddFriendNotify DeserializeLengthDelimited(Stream stream, global::Server.Ygy.Game.Pb.PBMsgAnswerAddFriendNotify instance)
         {
-            if (instance.Friends == null)
-                instance.Friends = new List<string>();
             long limit = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt32(stream);
             limit += stream.Position;
             while (true)
@@ -2016,8 +4500,10 @@ namespace Server.Ygy.Game.Pb
                 {
                     // Field 1 LengthDelimited
                     case 10:
-                        // repeated
-                        instance.Friends.Add(global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream));
+                        if (instance.AddFriendInfo == null)
+                            instance.AddFriendInfo = global::Server.Ygy.Game.Pb.PBMsgFriendInfo.DeserializeLengthDelimited(stream);
+                        else
+                            global::Server.Ygy.Game.Pb.PBMsgFriendInfo.DeserializeLengthDelimited(stream, instance.AddFriendInfo);
                         continue;
                 }
 
@@ -2038,10 +4524,8 @@ namespace Server.Ygy.Game.Pb
         }
 
         /// <summary>Read the given number of bytes from the stream and deserialze it into the instance.</summary>
-        public static global::Server.Ygy.Game.Pb.PBMsgChatFriendDataList DeserializeLength(Stream stream, int length, global::Server.Ygy.Game.Pb.PBMsgChatFriendDataList instance)
+        public static global::Server.Ygy.Game.Pb.PBMsgAnswerAddFriendNotify DeserializeLength(Stream stream, int length, global::Server.Ygy.Game.Pb.PBMsgAnswerAddFriendNotify instance)
         {
-            if (instance.Friends == null)
-                instance.Friends = new List<string>();
             long limit = stream.Position + length;
             while (true)
             {
@@ -2060,8 +4544,10 @@ namespace Server.Ygy.Game.Pb
                 {
                     // Field 1 LengthDelimited
                     case 10:
-                        // repeated
-                        instance.Friends.Add(global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream));
+                        if (instance.AddFriendInfo == null)
+                            instance.AddFriendInfo = global::Server.Ygy.Game.Pb.PBMsgFriendInfo.DeserializeLengthDelimited(stream);
+                        else
+                            global::Server.Ygy.Game.Pb.PBMsgFriendInfo.DeserializeLengthDelimited(stream, instance.AddFriendInfo);
                         continue;
                 }
 
@@ -2082,23 +4568,26 @@ namespace Server.Ygy.Game.Pb
         }
 
         /// <summary>Serialize the instance into the stream</summary>
-        public static void Serialize(Stream stream, PBMsgChatFriendDataList instance)
+        public static void Serialize(Stream stream, PBMsgAnswerAddFriendNotify instance)
         {
             var msField = global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Pop();
-            if (instance.Friends != null)
+            if (instance.AddFriendInfo != null)
             {
-                foreach (var i1 in instance.Friends)
-                {
-                    // Key for field: 1, LengthDelimited
-                    stream.WriteByte(10);
-                    global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(i1));
-                }
+                // Key for field: 1, LengthDelimited
+                stream.WriteByte(10);
+                ﻿msField.SetLength(0);
+                global::Server.Ygy.Game.Pb.PBMsgFriendInfo.Serialize(msField, instance.AddFriendInfo);
+                // Length delimited byte array
+                uint length1 = (uint)msField.Length;
+                global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt32(stream, length1);
+                msField.WriteTo(stream);
+
             }
             global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Push(msField);
         }
 
         /// <summary>Helper: Serialize into a MemoryStream and return its byte array</summary>
-        public static byte[] SerializeToBytes(PBMsgChatFriendDataList instance)
+        public static byte[] SerializeToBytes(PBMsgAnswerAddFriendNotify instance)
         {
             using (var ms = new MemoryStream())
             {
@@ -2107,7 +4596,7 @@ namespace Server.Ygy.Game.Pb
             }
         }
         /// <summary>Helper: Serialize with a varint length prefix</summary>
-        public static void SerializeLengthDelimited(Stream stream, PBMsgChatFriendDataList instance)
+        public static void SerializeLengthDelimited(Stream stream, PBMsgAnswerAddFriendNotify instance)
         {
             var data = SerializeToBytes(instance);
             global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt32(stream, (uint)data.Length);

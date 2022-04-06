@@ -38,5 +38,12 @@ namespace Server.ygy.game.map.modules.chat
         /// </summary>
         public static int ERETURNCODECHAT_NO_FRIEND_LIST = -204;
 
+        /// <summary>
+        /// Code : -205
+        /// 已经是好友
+        /// </summary>
+        public static int ERETURNCODECHAT_ALREADY_FRIEND = -205;
+
+
     }
 }

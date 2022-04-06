@@ -55,5 +55,16 @@ namespace Server.ygy.game.map.modules.login
         /// 密码不合法
         /// </summary>
         public static int ERETURNCODELOGIN_PASSWORD_ILEGAL = -107;
+        /// <summary>
+        /// code : -108
+        /// 用户连接集合不存在
+        /// </summary>
+        public static int ERETURNCODELOGIN_NO_USER_DIC = -108;
+
+        /// <summary>
+        /// code : -109
+        /// 发送消息失败
+        /// </summary>
+        public static int ERETURNCODELOGIN_SEND_MESSAGE_ERROR = -109;
     }
 }

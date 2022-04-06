@@ -59,10 +59,12 @@ namespace Server.Ygy.Game.Db
         /// <summary>Takes the remaining content of the stream and deserialze it into the instance.</summary>
         public static global::Server.Ygy.Game.Db.DBCharacter Deserialize(Stream stream, global::Server.Ygy.Game.Db.DBCharacter instance)
         {
-            if (instance.UserChatLog == null)
-                instance.UserChatLog = new List<global::Server.Ygy.Game.Db.DBUserChatLog>();
+            if (instance.UserSendChatLog == null)
+                instance.UserSendChatLog = new List<global::Server.Ygy.Game.Db.DBUserChatLog>();
+            if (instance.UserReceiveChatLog == null)
+                instance.UserReceiveChatLog = new List<global::Server.Ygy.Game.Db.DBUserChatLog>();
             if (instance.GameData == null)
-                instance.GameData = new List<global::Server.Ygy.Game.Db.DBGameData>();
+                instance.GameData = new List<global::Server.Ygy.Game.Db.DBGameRecordData>();
             while (true)
             {
                 int keyByte = stream.ReadByte();
@@ -88,12 +90,17 @@ namespace Server.Ygy.Game.Db
                     // Field 3 LengthDelimited
                     case 26:
                         // repeated
-                        instance.UserChatLog.Add(global::Server.Ygy.Game.Db.DBUserChatLog.DeserializeLengthDelimited(stream));
+                        instance.UserSendChatLog.Add(global::Server.Ygy.Game.Db.DBUserChatLog.DeserializeLengthDelimited(stream));
                         continue;
                     // Field 4 LengthDelimited
                     case 34:
                         // repeated
-                        instance.GameData.Add(global::Server.Ygy.Game.Db.DBGameData.DeserializeLengthDelimited(stream));
+                        instance.UserReceiveChatLog.Add(global::Server.Ygy.Game.Db.DBUserChatLog.DeserializeLengthDelimited(stream));
+                        continue;
+                    // Field 5 LengthDelimited
+                    case 42:
+                        // repeated
+                        instance.GameData.Add(global::Server.Ygy.Game.Db.DBGameRecordData.DeserializeLengthDelimited(stream));
                         continue;
                 }
 
@@ -116,10 +123,12 @@ namespace Server.Ygy.Game.Db
         /// <summary>Read the VarInt length prefix and the given number of bytes from the stream and deserialze it into the instance.</summary>
         public static global::Server.Ygy.Game.Db.DBCharacter DeserializeLengthDelimited(Stream stream, global::Server.Ygy.Game.Db.DBCharacter instance)
         {
-            if (instance.UserChatLog == null)
-                instance.UserChatLog = new List<global::Server.Ygy.Game.Db.DBUserChatLog>();
+            if (instance.UserSendChatLog == null)
+                instance.UserSendChatLog = new List<global::Server.Ygy.Game.Db.DBUserChatLog>();
+            if (instance.UserReceiveChatLog == null)
+                instance.UserReceiveChatLog = new List<global::Server.Ygy.Game.Db.DBUserChatLog>();
             if (instance.GameData == null)
-                instance.GameData = new List<global::Server.Ygy.Game.Db.DBGameData>();
+                instance.GameData = new List<global::Server.Ygy.Game.Db.DBGameRecordData>();
             long limit = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt32(stream);
             limit += stream.Position;
             while (true)
@@ -154,12 +163,17 @@ namespace Server.Ygy.Game.Db
                     // Field 3 LengthDelimited
                     case 26:
                         // repeated
-                        instance.UserChatLog.Add(global::Server.Ygy.Game.Db.DBUserChatLog.DeserializeLengthDelimited(stream));
+                        instance.UserSendChatLog.Add(global::Server.Ygy.Game.Db.DBUserChatLog.DeserializeLengthDelimited(stream));
                         continue;
                     // Field 4 LengthDelimited
                     case 34:
                         // repeated
-                        instance.GameData.Add(global::Server.Ygy.Game.Db.DBGameData.DeserializeLengthDelimited(stream));
+                        instance.UserReceiveChatLog.Add(global::Server.Ygy.Game.Db.DBUserChatLog.DeserializeLengthDelimited(stream));
+                        continue;
+                    // Field 5 LengthDelimited
+                    case 42:
+                        // repeated
+                        instance.GameData.Add(global::Server.Ygy.Game.Db.DBGameRecordData.DeserializeLengthDelimited(stream));
                         continue;
                 }
 
@@ -182,10 +196,12 @@ namespace Server.Ygy.Game.Db
         /// <summary>Read the given number of bytes from the stream and deserialze it into the instance.</summary>
         public static global::Server.Ygy.Game.Db.DBCharacter DeserializeLength(Stream stream, int length, global::Server.Ygy.Game.Db.DBCharacter instance)
         {
-            if (instance.UserChatLog == null)
-                instance.UserChatLog = new List<global::Server.Ygy.Game.Db.DBUserChatLog>();
+            if (instance.UserSendChatLog == null)
+                instance.UserSendChatLog = new List<global::Server.Ygy.Game.Db.DBUserChatLog>();
+            if (instance.UserReceiveChatLog == null)
+                instance.UserReceiveChatLog = new List<global::Server.Ygy.Game.Db.DBUserChatLog>();
             if (instance.GameData == null)
-                instance.GameData = new List<global::Server.Ygy.Game.Db.DBGameData>();
+                instance.GameData = new List<global::Server.Ygy.Game.Db.DBGameRecordData>();
             long limit = stream.Position + length;
             while (true)
             {
@@ -219,12 +235,17 @@ namespace Server.Ygy.Game.Db
                     // Field 3 LengthDelimited
                     case 26:
                         // repeated
-                        instance.UserChatLog.Add(global::Server.Ygy.Game.Db.DBUserChatLog.DeserializeLengthDelimited(stream));
+                        instance.UserSendChatLog.Add(global::Server.Ygy.Game.Db.DBUserChatLog.DeserializeLengthDelimited(stream));
                         continue;
                     // Field 4 LengthDelimited
                     case 34:
                         // repeated
-                        instance.GameData.Add(global::Server.Ygy.Game.Db.DBGameData.DeserializeLengthDelimited(stream));
+                        instance.UserReceiveChatLog.Add(global::Server.Ygy.Game.Db.DBUserChatLog.DeserializeLengthDelimited(stream));
+                        continue;
+                    // Field 5 LengthDelimited
+                    case 42:
+                        // repeated
+                        instance.GameData.Add(global::Server.Ygy.Game.Db.DBGameRecordData.DeserializeLengthDelimited(stream));
                         continue;
                 }
 
@@ -272,9 +293,9 @@ namespace Server.Ygy.Game.Db
                 msField.WriteTo(stream);
 
             }
-            if (instance.UserChatLog != null)
+            if (instance.UserSendChatLog != null)
             {
-                foreach (var i3 in instance.UserChatLog)
+                foreach (var i3 in instance.UserSendChatLog)
                 {
                     // Key for field: 3, LengthDelimited
                     stream.WriteByte(26);
@@ -287,17 +308,32 @@ namespace Server.Ygy.Game.Db
 
                 }
             }
-            if (instance.GameData != null)
+            if (instance.UserReceiveChatLog != null)
             {
-                foreach (var i4 in instance.GameData)
+                foreach (var i4 in instance.UserReceiveChatLog)
                 {
                     // Key for field: 4, LengthDelimited
                     stream.WriteByte(34);
                     ﻿msField.SetLength(0);
-                    global::Server.Ygy.Game.Db.DBGameData.Serialize(msField, i4);
+                    global::Server.Ygy.Game.Db.DBUserChatLog.Serialize(msField, i4);
                     // Length delimited byte array
                     uint length4 = (uint)msField.Length;
                     global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt32(stream, length4);
+                    msField.WriteTo(stream);
+
+                }
+            }
+            if (instance.GameData != null)
+            {
+                foreach (var i5 in instance.GameData)
+                {
+                    // Key for field: 5, LengthDelimited
+                    stream.WriteByte(42);
+                    ﻿msField.SetLength(0);
+                    global::Server.Ygy.Game.Db.DBGameRecordData.Serialize(msField, i5);
+                    // Length delimited byte array
+                    uint length5 = (uint)msField.Length;
+                    global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt32(stream, length5);
                     msField.WriteTo(stream);
 
                 }
@@ -867,6 +903,10 @@ namespace Server.Ygy.Game.Db
                     case 42:
                         instance.Name = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
                         continue;
+                    // Field 6 LengthDelimited
+                    case 50:
+                        instance.UserImg = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
                 }
 
                 var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
@@ -925,6 +965,10 @@ namespace Server.Ygy.Game.Db
                     case 42:
                         instance.Name = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
                         continue;
+                    // Field 6 LengthDelimited
+                    case 50:
+                        instance.UserImg = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
                 }
 
                 var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
@@ -982,6 +1026,10 @@ namespace Server.Ygy.Game.Db
                     case 42:
                         instance.Name = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
                         continue;
+                    // Field 6 LengthDelimited
+                    case 50:
+                        instance.UserImg = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
                 }
 
                 var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
@@ -1033,6 +1081,12 @@ namespace Server.Ygy.Game.Db
                 // Key for field: 5, LengthDelimited
                 stream.WriteByte(42);
                 global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.Name));
+            }
+            if (instance.UserImg != null)
+            {
+                // Key for field: 6, LengthDelimited
+                stream.WriteByte(50);
+                global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.UserImg));
             }
             global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Push(msField);
         }
@@ -1102,7 +1156,7 @@ namespace Server.Ygy.Game.Db
         public static global::Server.Ygy.Game.Db.DBUserFriend Deserialize(Stream stream, global::Server.Ygy.Game.Db.DBUserFriend instance)
         {
             if (instance.Friends == null)
-                instance.Friends = new List<string>();
+                instance.Friends = new List<global::Server.Ygy.Game.Db.DBFriendInfo>();
             while (true)
             {
                 int keyByte = stream.ReadByte();
@@ -1114,7 +1168,7 @@ namespace Server.Ygy.Game.Db
                     // Field 1 LengthDelimited
                     case 10:
                         // repeated
-                        instance.Friends.Add(global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream));
+                        instance.Friends.Add(global::Server.Ygy.Game.Db.DBFriendInfo.DeserializeLengthDelimited(stream));
                         continue;
                 }
 
@@ -1138,7 +1192,7 @@ namespace Server.Ygy.Game.Db
         public static global::Server.Ygy.Game.Db.DBUserFriend DeserializeLengthDelimited(Stream stream, global::Server.Ygy.Game.Db.DBUserFriend instance)
         {
             if (instance.Friends == null)
-                instance.Friends = new List<string>();
+                instance.Friends = new List<global::Server.Ygy.Game.Db.DBFriendInfo>();
             long limit = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt32(stream);
             limit += stream.Position;
             while (true)
@@ -1159,7 +1213,7 @@ namespace Server.Ygy.Game.Db
                     // Field 1 LengthDelimited
                     case 10:
                         // repeated
-                        instance.Friends.Add(global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream));
+                        instance.Friends.Add(global::Server.Ygy.Game.Db.DBFriendInfo.DeserializeLengthDelimited(stream));
                         continue;
                 }
 
@@ -1183,7 +1237,7 @@ namespace Server.Ygy.Game.Db
         public static global::Server.Ygy.Game.Db.DBUserFriend DeserializeLength(Stream stream, int length, global::Server.Ygy.Game.Db.DBUserFriend instance)
         {
             if (instance.Friends == null)
-                instance.Friends = new List<string>();
+                instance.Friends = new List<global::Server.Ygy.Game.Db.DBFriendInfo>();
             long limit = stream.Position + length;
             while (true)
             {
@@ -1203,7 +1257,7 @@ namespace Server.Ygy.Game.Db
                     // Field 1 LengthDelimited
                     case 10:
                         // repeated
-                        instance.Friends.Add(global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream));
+                        instance.Friends.Add(global::Server.Ygy.Game.Db.DBFriendInfo.DeserializeLengthDelimited(stream));
                         continue;
                 }
 
@@ -1233,7 +1287,13 @@ namespace Server.Ygy.Game.Db
                 {
                     // Key for field: 1, LengthDelimited
                     stream.WriteByte(10);
-                    global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(i1));
+                    ﻿msField.SetLength(0);
+                    global::Server.Ygy.Game.Db.DBFriendInfo.Serialize(msField, i1);
+                    // Length delimited byte array
+                    uint length1 = (uint)msField.Length;
+                    global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt32(stream, length1);
+                    msField.WriteTo(stream);
+
                 }
             }
             global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Push(msField);
@@ -1250,6 +1310,232 @@ namespace Server.Ygy.Game.Db
         }
         /// <summary>Helper: Serialize with a varint length prefix</summary>
         public static void SerializeLengthDelimited(Stream stream, DBUserFriend instance)
+        {
+            var data = SerializeToBytes(instance);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt32(stream, (uint)data.Length);
+            stream.Write(data, 0, data.Length);
+        }
+    }
+
+    public partial class DBFriendInfo
+    {
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static DBFriendInfo Deserialize(Stream stream)
+        {
+            var instance = new DBFriendInfo();
+            Deserialize(stream, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static DBFriendInfo DeserializeLengthDelimited(Stream stream)
+        {
+            var instance = new DBFriendInfo();
+            DeserializeLengthDelimited(stream, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static DBFriendInfo DeserializeLength(Stream stream, int length)
+        {
+            var instance = new DBFriendInfo();
+            DeserializeLength(stream, length, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: put the buffer into a MemoryStream and create a new instance to deserializing into</summary>
+        public static DBFriendInfo Deserialize(byte[] buffer)
+        {
+            var instance = new DBFriendInfo();
+            using (var ms = new MemoryStream(buffer))
+                Deserialize(ms, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: put the buffer into a MemoryStream before deserializing</summary>
+        public static global::Server.Ygy.Game.Db.DBFriendInfo Deserialize(byte[] buffer, global::Server.Ygy.Game.Db.DBFriendInfo instance)
+        {
+            using (var ms = new MemoryStream(buffer))
+                Deserialize(ms, instance);
+            return instance;
+        }
+
+        /// <summary>Takes the remaining content of the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Db.DBFriendInfo Deserialize(Stream stream, global::Server.Ygy.Game.Db.DBFriendInfo instance)
+        {
+            while (true)
+            {
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    break;
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 LengthDelimited
+                    case 10:
+                        instance.Account = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 2 LengthDelimited
+                    case 18:
+                        instance.Name = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 3 LengthDelimited
+                    case 26:
+                        instance.UserImg = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Read the VarInt length prefix and the given number of bytes from the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Db.DBFriendInfo DeserializeLengthDelimited(Stream stream, global::Server.Ygy.Game.Db.DBFriendInfo instance)
+        {
+            long limit = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt32(stream);
+            limit += stream.Position;
+            while (true)
+            {
+                if (stream.Position >= limit)
+                {
+                    if (stream.Position == limit)
+                        break;
+                    else
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Read past max limit");
+                }
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    throw new System.IO.EndOfStreamException();
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 LengthDelimited
+                    case 10:
+                        instance.Account = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 2 LengthDelimited
+                    case 18:
+                        instance.Name = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 3 LengthDelimited
+                    case 26:
+                        instance.UserImg = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Read the given number of bytes from the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Db.DBFriendInfo DeserializeLength(Stream stream, int length, global::Server.Ygy.Game.Db.DBFriendInfo instance)
+        {
+            long limit = stream.Position + length;
+            while (true)
+            {
+                if (stream.Position >= limit)
+                {
+                    if (stream.Position == limit)
+                        break;
+                    else
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Read past max limit");
+                }
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    throw new System.IO.EndOfStreamException();
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 LengthDelimited
+                    case 10:
+                        instance.Account = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 2 LengthDelimited
+                    case 18:
+                        instance.Name = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 3 LengthDelimited
+                    case 26:
+                        instance.UserImg = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Serialize the instance into the stream</summary>
+        public static void Serialize(Stream stream, DBFriendInfo instance)
+        {
+            var msField = global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Pop();
+            if (instance.Account != null)
+            {
+                // Key for field: 1, LengthDelimited
+                stream.WriteByte(10);
+                global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.Account));
+            }
+            if (instance.Name != null)
+            {
+                // Key for field: 2, LengthDelimited
+                stream.WriteByte(18);
+                global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.Name));
+            }
+            if (instance.UserImg != null)
+            {
+                // Key for field: 3, LengthDelimited
+                stream.WriteByte(26);
+                global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.UserImg));
+            }
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Push(msField);
+        }
+
+        /// <summary>Helper: Serialize into a MemoryStream and return its byte array</summary>
+        public static byte[] SerializeToBytes(DBFriendInfo instance)
+        {
+            using (var ms = new MemoryStream())
+            {
+                Serialize(ms, instance);
+                return ms.ToArray();
+            }
+        }
+        /// <summary>Helper: Serialize with a varint length prefix</summary>
+        public static void SerializeLengthDelimited(Stream stream, DBFriendInfo instance)
         {
             var data = SerializeToBytes(instance);
             global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt32(stream, (uint)data.Length);
@@ -1313,15 +1599,19 @@ namespace Server.Ygy.Game.Db
                 {
                     // Field 1 LengthDelimited
                     case 10:
-                        instance.ReceiveAccount = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        instance.SendAccount = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
                         continue;
                     // Field 2 LengthDelimited
                     case 18:
-                        instance.Msg = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        instance.ReceiveAccount = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
                         continue;
                     // Field 3 LengthDelimited
                     case 26:
-                        instance.Date = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        instance.Msg = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 4 Varint
+                    case 32:
+                        instance.Date = (long)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
                         continue;
                 }
 
@@ -1363,15 +1653,19 @@ namespace Server.Ygy.Game.Db
                 {
                     // Field 1 LengthDelimited
                     case 10:
-                        instance.ReceiveAccount = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        instance.SendAccount = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
                         continue;
                     // Field 2 LengthDelimited
                     case 18:
-                        instance.Msg = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        instance.ReceiveAccount = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
                         continue;
                     // Field 3 LengthDelimited
                     case 26:
-                        instance.Date = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        instance.Msg = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 4 Varint
+                    case 32:
+                        instance.Date = (long)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
                         continue;
                 }
 
@@ -1412,15 +1706,19 @@ namespace Server.Ygy.Game.Db
                 {
                     // Field 1 LengthDelimited
                     case 10:
-                        instance.ReceiveAccount = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        instance.SendAccount = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
                         continue;
                     // Field 2 LengthDelimited
                     case 18:
-                        instance.Msg = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        instance.ReceiveAccount = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
                         continue;
                     // Field 3 LengthDelimited
                     case 26:
-                        instance.Date = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        instance.Msg = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 4 Varint
+                    case 32:
+                        instance.Date = (long)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
                         continue;
                 }
 
@@ -1444,24 +1742,27 @@ namespace Server.Ygy.Game.Db
         public static void Serialize(Stream stream, DBUserChatLog instance)
         {
             var msField = global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Pop();
-            if (instance.ReceiveAccount != null)
+            if (instance.SendAccount != null)
             {
                 // Key for field: 1, LengthDelimited
                 stream.WriteByte(10);
+                global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.SendAccount));
+            }
+            if (instance.ReceiveAccount != null)
+            {
+                // Key for field: 2, LengthDelimited
+                stream.WriteByte(18);
                 global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.ReceiveAccount));
             }
             if (instance.Msg != null)
             {
-                // Key for field: 2, LengthDelimited
-                stream.WriteByte(18);
-                global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.Msg));
-            }
-            if (instance.Date != null)
-            {
                 // Key for field: 3, LengthDelimited
                 stream.WriteByte(26);
-                global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.Date));
+                global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.Msg));
             }
+            // Key for field: 4, Varint
+            stream.WriteByte(32);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.Date);
             global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Push(msField);
         }
 
@@ -1537,29 +1838,37 @@ namespace Server.Ygy.Game.Db
                 // Optimized reading of known fields with field ID < 16
                 switch (keyByte)
                 {
-                    // Field 1 LengthDelimited
-                    case 10:
-                        instance.StartDate = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                    // Field 1 Varint
+                    case 8:
+                        instance.EndDate = (long)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
                         continue;
-                    // Field 2 LengthDelimited
-                    case 18:
-                        instance.EndDate = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                    // Field 2 Varint
+                    case 16:
+                        instance.KillNum = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
                         continue;
                     // Field 3 Varint
                     case 24:
-                        instance.KillNum = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        instance.HeadShotNum = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
                         continue;
                     // Field 4 Varint
                     case 32:
-                        instance.HeadShotNum = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        instance.DeathNum = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
                         continue;
                     // Field 5 Varint
                     case 40:
-                        instance.DeathNum = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        instance.HarmNum = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
                         continue;
                     // Field 6 Varint
                     case 48:
-                        instance.HarmNum = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        instance.Rank = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    // Field 7 LengthDelimited
+                    case 58:
+                        instance.Name = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 8 LengthDelimited
+                    case 66:
+                        instance.Account = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
                         continue;
                 }
 
@@ -1599,29 +1908,37 @@ namespace Server.Ygy.Game.Db
                 // Optimized reading of known fields with field ID < 16
                 switch (keyByte)
                 {
-                    // Field 1 LengthDelimited
-                    case 10:
-                        instance.StartDate = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                    // Field 1 Varint
+                    case 8:
+                        instance.EndDate = (long)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
                         continue;
-                    // Field 2 LengthDelimited
-                    case 18:
-                        instance.EndDate = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                    // Field 2 Varint
+                    case 16:
+                        instance.KillNum = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
                         continue;
                     // Field 3 Varint
                     case 24:
-                        instance.KillNum = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        instance.HeadShotNum = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
                         continue;
                     // Field 4 Varint
                     case 32:
-                        instance.HeadShotNum = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        instance.DeathNum = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
                         continue;
                     // Field 5 Varint
                     case 40:
-                        instance.DeathNum = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        instance.HarmNum = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
                         continue;
                     // Field 6 Varint
                     case 48:
-                        instance.HarmNum = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        instance.Rank = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    // Field 7 LengthDelimited
+                    case 58:
+                        instance.Name = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 8 LengthDelimited
+                    case 66:
+                        instance.Account = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
                         continue;
                 }
 
@@ -1660,29 +1977,37 @@ namespace Server.Ygy.Game.Db
                 // Optimized reading of known fields with field ID < 16
                 switch (keyByte)
                 {
-                    // Field 1 LengthDelimited
-                    case 10:
-                        instance.StartDate = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                    // Field 1 Varint
+                    case 8:
+                        instance.EndDate = (long)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
                         continue;
-                    // Field 2 LengthDelimited
-                    case 18:
-                        instance.EndDate = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                    // Field 2 Varint
+                    case 16:
+                        instance.KillNum = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
                         continue;
                     // Field 3 Varint
                     case 24:
-                        instance.KillNum = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        instance.HeadShotNum = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
                         continue;
                     // Field 4 Varint
                     case 32:
-                        instance.HeadShotNum = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        instance.DeathNum = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
                         continue;
                     // Field 5 Varint
                     case 40:
-                        instance.DeathNum = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        instance.HarmNum = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
                         continue;
                     // Field 6 Varint
                     case 48:
-                        instance.HarmNum = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        instance.Rank = (int)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    // Field 7 LengthDelimited
+                    case 58:
+                        instance.Name = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
+                        continue;
+                    // Field 8 LengthDelimited
+                    case 66:
+                        instance.Account = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadString(stream);
                         continue;
                 }
 
@@ -1706,30 +2031,36 @@ namespace Server.Ygy.Game.Db
         public static void Serialize(Stream stream, DBGameData instance)
         {
             var msField = global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Pop();
-            if (instance.StartDate != null)
-            {
-                // Key for field: 1, LengthDelimited
-                stream.WriteByte(10);
-                global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.StartDate));
-            }
-            if (instance.EndDate != null)
-            {
-                // Key for field: 2, LengthDelimited
-                stream.WriteByte(18);
-                global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.EndDate));
-            }
+            // Key for field: 1, Varint
+            stream.WriteByte(8);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.EndDate);
+            // Key for field: 2, Varint
+            stream.WriteByte(16);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.KillNum);
             // Key for field: 3, Varint
             stream.WriteByte(24);
-            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.KillNum);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.HeadShotNum);
             // Key for field: 4, Varint
             stream.WriteByte(32);
-            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.HeadShotNum);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.DeathNum);
             // Key for field: 5, Varint
             stream.WriteByte(40);
-            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.DeathNum);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.HarmNum);
             // Key for field: 6, Varint
             stream.WriteByte(48);
-            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.HarmNum);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.Rank);
+            if (instance.Name != null)
+            {
+                // Key for field: 7, LengthDelimited
+                stream.WriteByte(58);
+                global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.Name));
+            }
+            if (instance.Account != null)
+            {
+                // Key for field: 8, LengthDelimited
+                stream.WriteByte(66);
+                global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteBytes(stream, Encoding.UTF8.GetBytes(instance.Account));
+            }
             global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Push(msField);
         }
 
@@ -1744,6 +2075,244 @@ namespace Server.Ygy.Game.Db
         }
         /// <summary>Helper: Serialize with a varint length prefix</summary>
         public static void SerializeLengthDelimited(Stream stream, DBGameData instance)
+        {
+            var data = SerializeToBytes(instance);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt32(stream, (uint)data.Length);
+            stream.Write(data, 0, data.Length);
+        }
+    }
+
+    public partial class DBGameRecordData
+    {
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static DBGameRecordData Deserialize(Stream stream)
+        {
+            var instance = new DBGameRecordData();
+            Deserialize(stream, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static DBGameRecordData DeserializeLengthDelimited(Stream stream)
+        {
+            var instance = new DBGameRecordData();
+            DeserializeLengthDelimited(stream, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: create a new instance to deserializing into</summary>
+        public static DBGameRecordData DeserializeLength(Stream stream, int length)
+        {
+            var instance = new DBGameRecordData();
+            DeserializeLength(stream, length, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: put the buffer into a MemoryStream and create a new instance to deserializing into</summary>
+        public static DBGameRecordData Deserialize(byte[] buffer)
+        {
+            var instance = new DBGameRecordData();
+            using (var ms = new MemoryStream(buffer))
+                Deserialize(ms, instance);
+            return instance;
+        }
+
+        /// <summary>Helper: put the buffer into a MemoryStream before deserializing</summary>
+        public static global::Server.Ygy.Game.Db.DBGameRecordData Deserialize(byte[] buffer, global::Server.Ygy.Game.Db.DBGameRecordData instance)
+        {
+            using (var ms = new MemoryStream(buffer))
+                Deserialize(ms, instance);
+            return instance;
+        }
+
+        /// <summary>Takes the remaining content of the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Db.DBGameRecordData Deserialize(Stream stream, global::Server.Ygy.Game.Db.DBGameRecordData instance)
+        {
+            if (instance.Info == null)
+                instance.Info = new List<global::Server.Ygy.Game.Db.DBGameData>();
+            while (true)
+            {
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    break;
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 Varint
+                    case 8:
+                        instance.Id = (long)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    // Field 2 Varint
+                    case 16:
+                        instance.StartDate = (long)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    // Field 3 LengthDelimited
+                    case 26:
+                        // repeated
+                        instance.Info.Add(global::Server.Ygy.Game.Db.DBGameData.DeserializeLengthDelimited(stream));
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Read the VarInt length prefix and the given number of bytes from the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Db.DBGameRecordData DeserializeLengthDelimited(Stream stream, global::Server.Ygy.Game.Db.DBGameRecordData instance)
+        {
+            if (instance.Info == null)
+                instance.Info = new List<global::Server.Ygy.Game.Db.DBGameData>();
+            long limit = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt32(stream);
+            limit += stream.Position;
+            while (true)
+            {
+                if (stream.Position >= limit)
+                {
+                    if (stream.Position == limit)
+                        break;
+                    else
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Read past max limit");
+                }
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    throw new System.IO.EndOfStreamException();
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 Varint
+                    case 8:
+                        instance.Id = (long)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    // Field 2 Varint
+                    case 16:
+                        instance.StartDate = (long)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    // Field 3 LengthDelimited
+                    case 26:
+                        // repeated
+                        instance.Info.Add(global::Server.Ygy.Game.Db.DBGameData.DeserializeLengthDelimited(stream));
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Read the given number of bytes from the stream and deserialze it into the instance.</summary>
+        public static global::Server.Ygy.Game.Db.DBGameRecordData DeserializeLength(Stream stream, int length, global::Server.Ygy.Game.Db.DBGameRecordData instance)
+        {
+            if (instance.Info == null)
+                instance.Info = new List<global::Server.Ygy.Game.Db.DBGameData>();
+            long limit = stream.Position + length;
+            while (true)
+            {
+                if (stream.Position >= limit)
+                {
+                    if (stream.Position == limit)
+                        break;
+                    else
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Read past max limit");
+                }
+                int keyByte = stream.ReadByte();
+                if (keyByte == -1)
+                    throw new System.IO.EndOfStreamException();
+                // Optimized reading of known fields with field ID < 16
+                switch (keyByte)
+                {
+                    // Field 1 Varint
+                    case 8:
+                        instance.Id = (long)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    // Field 2 Varint
+                    case 16:
+                        instance.StartDate = (long)global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadUInt64(stream);
+                        continue;
+                    // Field 3 LengthDelimited
+                    case 26:
+                        // repeated
+                        instance.Info.Add(global::Server.Ygy.Game.Db.DBGameData.DeserializeLengthDelimited(stream));
+                        continue;
+                }
+
+                var key = global::SilentOrbit.ProtocolBuffers.ProtocolParser.ReadKey((byte)keyByte, stream);
+
+                // Reading field ID > 16 and unknown field ID/wire type combinations
+                switch (key.Field)
+                {
+                    case 0:
+                        throw new global::SilentOrbit.ProtocolBuffers.ProtocolBufferException("Invalid field id: 0, something went wrong in the stream");
+                    default:
+                        global::SilentOrbit.ProtocolBuffers.ProtocolParser.SkipKey(stream, key);
+                        break;
+                }
+            }
+
+            return instance;
+        }
+
+        /// <summary>Serialize the instance into the stream</summary>
+        public static void Serialize(Stream stream, DBGameRecordData instance)
+        {
+            var msField = global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Pop();
+            // Key for field: 1, Varint
+            stream.WriteByte(8);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.Id);
+            // Key for field: 2, Varint
+            stream.WriteByte(16);
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt64(stream,(ulong)instance.StartDate);
+            if (instance.Info != null)
+            {
+                foreach (var i3 in instance.Info)
+                {
+                    // Key for field: 3, LengthDelimited
+                    stream.WriteByte(26);
+                    ﻿msField.SetLength(0);
+                    global::Server.Ygy.Game.Db.DBGameData.Serialize(msField, i3);
+                    // Length delimited byte array
+                    uint length3 = (uint)msField.Length;
+                    global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt32(stream, length3);
+                    msField.WriteTo(stream);
+
+                }
+            }
+            global::SilentOrbit.ProtocolBuffers.ProtocolParser.Stack.Push(msField);
+        }
+
+        /// <summary>Helper: Serialize into a MemoryStream and return its byte array</summary>
+        public static byte[] SerializeToBytes(DBGameRecordData instance)
+        {
+            using (var ms = new MemoryStream())
+            {
+                Serialize(ms, instance);
+                return ms.ToArray();
+            }
+        }
+        /// <summary>Helper: Serialize with a varint length prefix</summary>
+        public static void SerializeLengthDelimited(Stream stream, DBGameRecordData instance)
         {
             var data = SerializeToBytes(instance);
             global::SilentOrbit.ProtocolBuffers.ProtocolParser.WriteUInt32(stream, (uint)data.Length);

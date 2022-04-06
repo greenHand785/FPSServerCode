@@ -1,5 +1,6 @@
 ﻿using Server.ygy.game.map.util.common.interfaceDefine;
 using Server.Ygy.Game.Db;
+using Server.Ygy.Game.Pb;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,7 +40,28 @@ namespace Server.ygy.game.map.modules.character
         // 将数据存入pbMsg中
         public void Serialie2PB(object pbMsg)
         {
-
+            if(pbMsg == null)
+            {
+                return;
+            }
+            PBMsgUserData data = pbMsg as PBMsgUserData;
+            if(data == null)
+            {
+                return;
+            }
+            if(common_data == null || fight_data == null)
+            {
+                return;
+            }
+            data.Account = common_data.Account;
+            data.DeathNum = fight_data.Death_num;
+            data.Email = common_data.Email;
+            data.HarmNum = fight_data.Harm_num;
+            data.HeadShotNum = fight_data.Head_shoot_num;
+            data.KillNum = fight_data.Kill_num;
+            data.Name = common_data.Name;
+            data.PhoneNum = common_data.Phone_num;
+            data.UserImg = common_data.User_img;
         }
 
         // 从数据库中获取数据

@@ -52,6 +52,60 @@ namespace Server.ygy.game.map.modules.login
             clientDic = new Dictionary<string, ClientPeer>();
         }
 
+        // 向玩家发送消息根据账号
+        public int SendMessage(string account, MSGID msg, object pbMsg)
+        {
+            if(ClientDic == null)
+            {
+                return EReturnCodeLogin.ERETURNCODELOGIN_NO_USER_DIC;
+            }
+            clientDic.TryGetValue(account, out ClientPeer client);
+            if(client == null)
+            {
+                return EReturnCodeLogin.ERETURNCODELOGIN_SEND_MESSAGE_ERROR;
+            }
+            client.Send(msg, pbMsg);
+            return EReturnCode.ERETURNCODE_SUCCESS;
+        }
+        // 判断玩家是否在线
+        public bool IsOnLine(string account)
+        {
+            if(clientDic == null)
+            {
+                return false;
+            }
+            if (clientDic.ContainsKey(account))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        // 获得玩家的名称
+        public string GetPlayerName(string account)
+        {
+            if(ClientDic == null)
+            {
+                DBUserCommonData data = DBTool.Instance.GetUserCommonData(account);
+                if(data == null)
+                {
+                    return null;
+                }
+                return data.Name;
+            }
+            ClientDic.TryGetValue(account, out ClientPeer client);
+            if(client == null || client.character == null)
+            {
+                DBUserCommonData data = DBTool.Instance.GetUserCommonData(account);
+                if (data == null)
+                {
+                    return null;
+                }
+                return data.Name;
+            }
+            return client.character.GetAccount();
+        }
+
         // 注册消息
         public void RegisterMessage(MessagesMangerSystem manager)
         {
@@ -138,7 +192,7 @@ namespace Server.ygy.game.map.modules.login
             Character character = new Character();
             DBCharacter dBCharacter = DBTool.Instance.GetDBCharacter(pBMsgLoginRequest.Account);
             character.SerialieFromDB(dBCharacter);
-            if (character == null)
+            if (character.GetAccount() != pBMsgLoginRequest.Account)
             {
                 pBMsgLoginResponse.ReturnCode = EReturnCodeLogin.ERETURNCODELOGIN_NO_ACCOUNT; // 账号不存在
                 client.Send(MSGID.MSGID_LOGIN_RESPONSE, pBMsgLoginResponse);
@@ -154,16 +208,17 @@ namespace Server.ygy.game.map.modules.login
             if(ClientDic.ContainsKey(pBMsgLoginRequest.Account) == true)
             {
                 pBMsgLoginResponse.ReturnCode = EReturnCodeLogin.ERETURNCODELOGIN_ALREALDY_LOGIN; // 账号已被登陆
+                pBMsgLoginResponse.Account = pBMsgLoginRequest.Account;
                 client.Send(MSGID.MSGID_LOGIN_RESPONSE, pBMsgLoginResponse);
                 return;
             }
             clientDic.Add(pBMsgLoginRequest.Account, client);
-            // TODO 返回基本信息
-
             // 上线事件
             EventManager.Instance.PushEvent(EventDefine.Event_OnLine, true, 0, pBMsgLoginRequest.Account);
             // 登陸成功
             pBMsgLoginResponse.ReturnCode = EReturnCode.ERETURNCODE_SUCCESS;
+            pBMsgLoginResponse.Account = pBMsgLoginRequest.Account;
+            pBMsgLoginResponse.Psw = pBMsgLoginRequest.UserPassword;
             client.Send(MSGID.MSGID_LOGIN_RESPONSE, pBMsgLoginResponse);
         }
 
@@ -194,11 +249,9 @@ namespace Server.ygy.game.map.modules.login
                 client.Send(MSGID.MSGID_REGISTER_RESPONSE, pBMsgRegisterResponse);
                 return;
             }
-            DBCharacter dBCharacter = new DBCharacter();
-            Character ch = new Character();
-            ch.User_data = new UserData(new UserCommonData(account, psw, null, null, null), null);
-            ch.Save2DB(dBCharacter);
-            DBTool.Instance.SaveCharacter(dBCharacter);
+            // 创建账号
+            string name = GetUnRepeatName(3);
+            DBTool.Instance.CreateAccount(account, psw, name);
             pBMsgRegisterResponse.ReturnCode = EReturnCode.ERETURNCODE_SUCCESS;
             client.Send(MSGID.MSGID_REGISTER_RESPONSE, pBMsgRegisterResponse);
         }
@@ -222,9 +275,13 @@ namespace Server.ygy.game.map.modules.login
             PBMsgAffirmLoginResponse affirm = new PBMsgAffirmLoginResponse();
             affirm.ReturnCode = EReturnCode.ERETURNCODE_SUCCESS;
             client.Send(MSGID.MSGID_AFFIRM_LOGIN_RESPONSE, affirm);
+
+            clientDic[pBMsgAffirmLoginRequest.Account] =  client;
+            // 上线事件
+            EventManager.Instance.PushEvent(EventDefine.Event_OnLine, true, 0, pBMsgAffirmLoginRequest.Account);
         }
 
-        // 检查密码是否合法， 1. 长度是否在8 - 15个字符之间，2. 是否至少存在两种字符。
+        // 检查密码是否合法， 1. 长度是否在8 - 15个字符之间，2. 以英文字母开头
         private int CheckPasswordLegal(string psw)
         {
             if (psw == null)
@@ -235,8 +292,11 @@ namespace Server.ygy.game.map.modules.login
             {
                 return EReturnCodeLogin.ERETURNCODELOGIN_LENGTH_ILEGAL;
             }
-            // TODO 判断是否存在两种字符
-            
+            // 判断是否存在两种字符
+            if(System.Text.RegularExpressions.Regex.IsMatch(psw, @"^[a-zA-Z]{1,}[\d\W]{1,}$") == false)
+            {
+                return EReturnCodeLogin.ERETURNCODELOGIN_PASSWORD_ILEGAL;
+            }
             return EReturnCode.ERETURNCODE_SUCCESS;
         }
 
@@ -256,6 +316,31 @@ namespace Server.ygy.game.map.modules.login
                 return EReturnCodeLogin.ERETURNCODELOGIN_ACOUNT_EXISIT;
             }
             return EReturnCode.ERETURNCODE_SUCCESS;
+        }
+
+        // 获得独一无二的名称
+        private string GetUnRepeatName(int length)
+        {
+            string name = "笑嘻嘻氨基酸的离开垃圾上单买奶茶的爱速度为去沃尔夫就啊啊是大家看";
+            int randomIndex = 0;
+            string resultName = "";
+            Random random = new Random(DateTime.Now.Second);
+            while (true)
+            {
+                randomIndex = random.Next(0, name.Length);
+                resultName += name[randomIndex];
+                if(resultName.Length >= length)
+                {
+                    if (DBTool.Instance.isExisitName(resultName))
+                    {
+                        resultName = "";
+                    }
+                    else
+                    {
+                        return resultName;
+                    }
+                }
+            }
         }
     }
 }

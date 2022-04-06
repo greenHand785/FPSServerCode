@@ -53,7 +53,7 @@ namespace Server.ygy.game.map.util.common.eventManager
 
         private static EventManager instance;
 
-        private Dictionary<int, Action<object[]>> funcDic;
+        private Dictionary<int, List<Action<object[]>>> funcDic;
 
         private List<CalcuObj> delayEventList;
 
@@ -61,7 +61,7 @@ namespace Server.ygy.game.map.util.common.eventManager
 
         private EventManager()
         {
-            funcDic = new Dictionary<int, Action<object[]>>();
+            funcDic = new Dictionary<int, List<Action<object[]>>>();
             delayEventList = new List<CalcuObj>();
             autoEventDic = new Dictionary<int, Action<ClientPeer>>();
         }
@@ -87,16 +87,24 @@ namespace Server.ygy.game.map.util.common.eventManager
         {
             if (funcDic == null)
             {
-                LogNoteManager.Instance.Log("funcDic对象不存在");
+                Console.WriteLine("funcDic对象不存在");
                 return;
             }
-            Action<object[]> eventList = funcDic[eventType];
+            funcDic.TryGetValue(eventType, out List<Action<object[]>> eventList);
             if (eventList == null)
             {
-                LogNoteManager.Instance.Log("eventList对象不存在");
+                Console.WriteLine($"{eventType}:eventList对象不存在");
                 return;
             }
-            eventList(param);
+            for (int i = 0; i < eventList.Count; i++)
+            {
+                Action<object[]> func = eventList[i];
+                if (func == null)
+                {
+                    continue;
+                }
+                func(param);
+            }
         }
 
         /// <summary>
@@ -108,16 +116,18 @@ namespace Server.ygy.game.map.util.common.eventManager
         {
             if (funcDic.ContainsKey(eventType) == true)
             {
-                Action<object[]> list = funcDic[eventType];
+                List<Action<object[]>> list = funcDic[eventType];
                 if (list == null)
                 {
                     return;
                 }
-                list += action;
+                list.Add(action);
             }
             else
             {
-                funcDic.Add(eventType, action);
+                List<Action<object[]>> list = new List<Action<object[]>>();
+                list.Add(action);
+                funcDic.Add(eventType, list);
             }
         }
 
@@ -161,7 +171,7 @@ namespace Server.ygy.game.map.util.common.eventManager
                 ActiveEvent(eventType, param);
                 return;
             }
-            long delayTimeL = delayTime * 1000;
+            long delayTimeL = delayTime * 10000000;
             CalcuObj o = new CalcuObj(eventType, DateTime.Now.Ticks + delayTimeL, param);
             delayEventList.Add(o);
         }
@@ -202,7 +212,7 @@ namespace Server.ygy.game.map.util.common.eventManager
         // 到达新一天事件
         public void NewDay()
         {
-            Action<ClientPeer> eventList = autoEventDic[EventDefine.Event_NewDay];
+            autoEventDic.TryGetValue(EventDefine.Event_NewDay, out Action<ClientPeer> eventList);
             if(eventList == null)
             {
                 return;
@@ -227,13 +237,16 @@ namespace Server.ygy.game.map.util.common.eventManager
             {
                 if (DateTime.Now.Ticks >= delayEventList[i].EndTime)
                 {
-                    Action<object[]> funcList = funcDic[delayEventList[i].EventType];
+                    List<Action<object[]>> funcList = funcDic[delayEventList[i].EventType];
                     if (funcList == null)
                     {
                         delayEventList.RemoveAt(i);
                         continue;
                     }
-                    funcList(delayEventList[i].ParamList);
+                    foreach (var item in funcList)
+                    {
+                        item(delayEventList[i].ParamList);
+                    }
                     delayEventList.RemoveAt(i);
                 }
             }

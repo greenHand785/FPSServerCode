@@ -6,6 +6,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using Server.Ygy.Game.Pb;
 using Server.ygy.game.map.util.common.pbCodingTool;
+using static Server.ygy.game.map.util.common.pbCodingTool.PBCodingTool;
 
 namespace Server.Ygy.Game.Map
 {
@@ -114,6 +115,6 @@ namespace Server.Ygy.Game.Map
             }
         }
 
-        
+
     }
 }

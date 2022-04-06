@@ -15,25 +15,30 @@ namespace Server.ygy.game.map.modules.character
         private string phone_num;
         private string email;
         private string name;
+        private string user_img;
 
         public string Account { get => account; set => account = value; }
         public string Password { get => password; set => password = value; }
         public string Phone_num { get => phone_num; set => phone_num = value; }
         public string Email { get => email; set => email = value; }
         public string Name { get => name; set => name = value; }
+        public string User_img { get => user_img; set => user_img = value; }
 
-        public UserCommonData(string account, string password, string phone_num, string email, string name)
+        
+
+        public UserCommonData()
+        {
+
+        }
+
+        public UserCommonData(string account, string password, string phone_num, string email, string name, string user_img)
         {
             Account = account;
             Password = password;
             Phone_num = phone_num;
             Email = email;
             Name = name;
-        }
-
-        public UserCommonData()
-        {
-
+            User_img = user_img;
         }
 
         // 将数据存入pbMsg中
@@ -55,6 +60,7 @@ namespace Server.ygy.game.map.modules.character
             phone_num = dBUserCommonData.PhoneNum;
             email = dBUserCommonData.Email;
             name = dBUserCommonData.Name;
+            user_img = dBUserCommonData.UserImg;
         }
 
         // 将数据保存到数据库中
@@ -74,6 +80,7 @@ namespace Server.ygy.game.map.modules.character
             dBUserCommonData.PhoneNum = phone_num;
             dBUserCommonData.Email = email;
             dBUserCommonData.Name = name;
+            dBUserCommonData.UserImg = user_img;
         }
 
     }

@@ -1,5 +1,6 @@
 ﻿using Server.ygy.game.map.util.common.interfaceDefine;
 using Server.Ygy.Game.Db;
+using Server.Ygy.Game.Pb;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,12 +11,19 @@ namespace Server.ygy.game.map.modules.character
 {
     public class UserChatLog : ICommonBean
     {
+        private string send_account;
         private string receive_account;
         private string msg;
-        private string date;
+        private long date;
 
-        public UserChatLog(string receive_account, string msg, string date)
+        public UserChatLog()
         {
+
+        }
+
+        public UserChatLog(string send_account, string receive_account, string msg, long date)
+        {
+            Send_account = send_account;
             Receive_account = receive_account;
             Msg = msg;
             Date = date;
@@ -23,7 +31,8 @@ namespace Server.ygy.game.map.modules.character
 
         public string Receive_account { get => receive_account; set => receive_account = value; }
         public string Msg { get => msg; set => msg = value; }
-        public string Date { get => date; set => date = value; }
+        public long Date { get => date; set => date = value; }
+        public string Send_account { get => send_account; set => send_account = value; }
 
         public void Save2DB(object dbMsg)
         {
@@ -43,7 +52,17 @@ namespace Server.ygy.game.map.modules.character
 
         public void Serialie2PB(object pbMsg)
         {
-            throw new NotImplementedException();
+            if(pbMsg == null)
+            {
+                return;
+            }
+            PBMsgChatMsg msg = pbMsg as PBMsgChatMsg;
+            if(msg == null)
+            {
+                return;
+            }
+            msg.Date = date;
+            msg.Msg = this.msg;
         }
 
         public void SerialieFromDB(object dbMsg)
@@ -53,6 +72,7 @@ namespace Server.ygy.game.map.modules.character
             {
                 return;
             }
+            Send_account = dBUserChatLog.SendAccount;
             receive_account = dBUserChatLog.ReceiveAccount;
             msg = dBUserChatLog.Msg;
             date = dBUserChatLog.Date;

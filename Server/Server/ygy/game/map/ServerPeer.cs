@@ -197,9 +197,9 @@ namespace Server.Ygy.Game.Map
             app.ReceiveMessage(client, msg);
             //客户端主动下线
             //if (msg.opCode == (int)ApplicationProtocol.OFFLINE)
-            {
-                client.IsDisconnected = true;
-            }
+            //{
+            //    client.IsDisconnected = true;
+            //}
         }
     }
 }
